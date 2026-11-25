@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="動漫・文化活動主持人大熊（曾慶平），2011 年至今 287 場主持紀錄：聲優見面會、記者會、音樂會、講座、Cosplay 比賽。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="動漫主持人大熊">
+<meta property="og:description" content="動漫・文化活動主持人大熊（曾慶平），2011 年至今 287 場主持紀錄：聲優見面會、記者會、音樂會、講座、Cosplay 比賽。">
+<meta property="og:image" content="https://bitemela0613.github.io/bigbear-mc/img/yonezawa-mc.jpg">
+<meta property="og:url" content="https://bitemela0613.github.io/bigbear-mc/">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font-size:14px}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>動漫主持人大熊</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Mono:wght@500&family=Noto+Sans+TC:wght@400;500;700;900&display=swap">
+<style>
+/* Layout: a stage program — the MC up front, the numbers as a marquee, then the full run sheet grouped by year */
+:root{
+  --bg:#F5F4F9; --surface:#FFFFFF; --ink:#1C1A2B; --muted:#646079; --line:#E2DFEB;
+  --accent:#D92B57; --accent-soft:#FBE3EA; --blue:#2D58C9; --blue-soft:#E3EAFB;
+  --f-display:"Bricolage Grotesque","Noto Sans TC",system-ui,sans-serif;
+  --f-body:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#14121D; --surface:#1D1A29; --ink:#F0EEF7; --muted:#A39FB8; --line:#2F2B42;
+  --accent:#FF5E85; --accent-soft:#3A1D2A; --blue:#86A2FF; --blue-soft:#1F2742; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#14121D; --surface:#1D1A29; --ink:#F0EEF7; --muted:#A39FB8; --line:#2F2B42;
+  --accent:#FF5E85; --accent-soft:#3A1D2A; --blue:#86A2FF; --blue-soft:#1F2742; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.7;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 48px}
+.wrap{max-width:1120px;margin:0 auto}
+h1,h2,h3{margin:0;text-wrap:balance}
+a{color:var(--blue)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:40px;align-items:center;padding-block:48px 32px}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:10px}
+.onair{display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--accent);border-radius:4px;padding:1px 8px}
+.onair::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.name{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-top:14px}
+.name h1{font-family:var(--f-body);font-weight:900;font-size:clamp(56px,9vw,96px);line-height:1;letter-spacing:-.02em}
+.name .real{font-size:18px;color:var(--muted);font-weight:500}
+.lead{font-size:17px;max-width:34em;margin:20px 0 0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{font-size:13px;padding:4px 12px;border-radius:999px;background:var(--accent-soft);color:var(--ink);font-weight:500}
+.chip.blue{background:var(--blue-soft)}
+.label{font-size:12px;color:var(--muted);letter-spacing:.08em;margin-top:22px;font-weight:700}
+.photo{position:relative;margin:0}
+.photo img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:6px}
+.photo figcaption{font-size:12px;color:var(--muted);margin-top:8px}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:6px;border:1.5px solid var(--ink);color:var(--ink);text-decoration:none;font-weight:700;font-size:14px;background:var(--surface)}
+.btn small{font-weight:400;color:var(--muted)}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+
+/* marquee of numbers */
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-block:2px solid var(--ink);margin-top:8px}
+.stat{padding:18px 16px;border-left:1px solid var(--line)}
+.stat:first-child{border-left:0;padding-left:0}
+.stat b{display:block;font-family:var(--f-display);font-weight:800;font-size:clamp(34px,5vw,52px);line-height:1;font-variant-numeric:tabular-nums}
+.stat b em{font-style:normal;color:var(--accent)}
+.stat span{font-size:13px;color:var(--muted)}
+
+section{padding-top:56px}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:18px}
+.sec-head h2{font-size:26px;font-weight:900}
+.sec-head p{margin:0;color:var(--muted);font-size:14px}
+
+
+/* two column: categories + years */
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px}
+.cats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.cat{all:unset;cursor:pointer;display:grid;grid-template-columns:1fr auto;align-items:center;gap:2px 10px;padding:10px 14px;border-radius:6px;background:var(--surface);border:1px solid var(--line)}
+.cat:hover{border-color:var(--accent)}
+.cat[aria-pressed="true"]{border-color:var(--accent);background:var(--accent-soft)}
+.cat .zh{font-weight:700;font-size:15px}
+.cat .ja{grid-column:1;font-size:11px;color:var(--muted)}
+.cat .n{grid-row:1/3;grid-column:2;font-family:var(--f-display);font-weight:800;font-size:24px;font-variant-numeric:tabular-nums}
+.chart{display:flex;align-items:flex-end;gap:4px;height:200px;padding-top:24px;border-bottom:1px solid var(--line)}
+.bar{all:unset;cursor:pointer;flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%;position:relative}
+.bar i{display:block;width:100%;background:var(--blue);border-radius:3px 3px 0 0;min-height:3px}
+.bar:hover i,.bar[aria-pressed="true"] i{background:var(--accent)}
+.bar .v{font-family:var(--f-mono);font-size:11px;color:var(--muted);margin-bottom:4px}
+.years{display:flex;gap:4px}
+.years span{flex:1;text-align:center;font-family:var(--f-mono);font-size:10px;color:var(--muted);padding-top:6px}
+.note{font-size:13px;color:var(--muted);margin-top:12px}
+.orgs{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.org{font-size:13px;padding:4px 10px;border:1px solid var(--line);border-radius:4px;background:var(--surface)}
+.org b{font-family:var(--f-mono);color:var(--accent);margin-left:6px;font-weight:500}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px 12px}
+.gallery figure{margin:0;display:flex;flex-direction:column;min-width:0}
+.gallery img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:6px}
+.gallery figure:first-child{grid-column:1/-1}
+.gallery figure:first-child img{aspect-ratio:21/9;object-position:50% 35%}
+.gallery figcaption{font-size:12px;color:var(--muted);margin-top:6px}
+
+/* run sheet */
+.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:12px;border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.controls input,.controls select{font:inherit;font-size:14px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:8px 12px}
+.controls input{flex:1 1 240px;min-width:0}
+.reset{all:unset;cursor:pointer;font-size:13px;color:var(--accent);font-weight:700;padding:6px 4px}
+.count{font-size:13px;color:var(--muted);margin-left:auto;font-variant-numeric:tabular-nums}
+.yr{display:grid;grid-template-columns:110px minmax(0,1fr);gap:24px;padding-top:28px}
+.yr h3{font-family:var(--f-display);font-weight:800;font-size:36px;line-height:1;position:sticky;top:calc(env(safe-area-inset-top,0px) + 76px);align-self:start}
+.yr h3 small{display:block;font-family:var(--f-body);font-size:12px;color:var(--muted);font-weight:500;margin-top:6px}
+.list{display:flex;flex-direction:column;min-width:0}
+.ev{display:grid;grid-template-columns:62px minmax(0,1fr);gap:16px;padding:14px 0;border-top:1px solid var(--line)}
+.ev:first-child{border-top:2px solid var(--ink)}
+.ev .date{font-family:var(--f-mono);font-size:14px;padding-top:2px;font-variant-numeric:tabular-nums}
+.ev h4{margin:0;font-size:16px;font-weight:700;line-height:1.5}
+.ev .tag{display:inline-block;font-size:11px;font-weight:700;color:var(--accent);margin-right:8px;vertical-align:2px}
+.ev .g{font-size:14px;margin-top:2px}
+.ev .g::before{content:"來賓　";color:var(--muted);font-size:12px}
+.ev .meta{font-size:13px;color:var(--muted);margin-top:4px;display:flex;flex-wrap:wrap;gap:4px 14px}
+.ev .what{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.ev .what span{font-size:12px;padding:1px 8px;border-radius:3px;background:var(--blue-soft)}
+.empty{padding:40px 0;color:var(--muted)}
+mark{background:var(--accent-soft);color:inherit;border-radius:2px}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.primary:hover{color:#fff;filter:brightness(1.08)}
+.contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:32px;align-items:center;padding:32px;border:2px solid var(--ink);border-radius:8px;background:var(--surface)}
+.contact h2{font-size:30px;font-weight:900}
+.contact-intro p{margin:10px 0 0;color:var(--muted);max-width:30em}
+.contact-list{display:flex;flex-direction:column}
+.ci{display:grid;grid-template-columns:84px minmax(0,1fr) auto;gap:12px;align-items:center;padding:12px 0;border-top:1px solid var(--line)}
+.ci:first-child{border-top:0}
+.ci-k{font-family:var(--f-mono);font-size:12px;letter-spacing:.06em;color:var(--muted)}
+.ci-v{font-size:17px;font-weight:700;color:var(--ink);user-select:all;overflow-wrap:anywhere}
+a.ci-v{text-decoration:none;user-select:auto}
+a.ci-v:hover{color:var(--accent)}
+.copy{all:unset;cursor:pointer;font-size:13px;font-weight:700;color:var(--accent);padding:5px 12px;border:1.5px solid var(--accent);border-radius:999px;white-space:nowrap}
+.copy:hover{background:var(--accent-soft)}
+.copy:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (max-width:820px){.contact{grid-template-columns:1fr;padding:22px}}
+@media (max-width:440px){.ci{grid-template-columns:1fr auto}.ci-k{grid-column:1/-1}}
+footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+
+@media (max-width:820px){
+  .hero{grid-template-columns:1fr;gap:24px;padding-top:32px}
+  .photo{order:-1}
+  .split{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stat:nth-child(3){border-left:0;padding-left:0}
+  .stat:nth-child(n+3){border-top:1px solid var(--line)}
+  .gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .gallery figure:first-child img{aspect-ratio:16/9}
+  .yr{grid-template-columns:1fr;gap:8px}
+  .yr h3{position:static;font-size:30px}
+  .yr h3 small{display:inline;margin-left:8px}
+}
+@media (max-width:440px){.cats{grid-template-columns:1fr}.count{margin-left:0;width:100%}}
+@media (prefers-reduced-motion:no-preference){.btn,.cat,.bar i{transition:all .15s ease}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="hero">
+    <div>
+      <div class="eyebrow"><span class="onair">MC</span>動漫・文化活動主持人</div>
+      <div class="name"><h1>大熊</h1><span class="real">曾慶平</span></div>
+      <p class="lead">專業文化類活動主持人，擅長記者會、音樂會、簽名會、沙龍講座、脫口秀、映後座談、角色扮演比賽活動主持，也曾擔任競技比賽主播、音樂會導聆等。</p>
+      <div class="label">擅長的活動形式</div>
+      <div class="chips">
+        <span class="chip">記者會</span><span class="chip">音樂會導聆</span><span class="chip">簽名會・見面會</span><span class="chip">沙龍講座</span><span class="chip">脫口秀</span><span class="chip">映後座談</span><span class="chip">Cosplay 比賽</span><span class="chip">競技比賽主播</span>
+      </div>
+      <div class="label">熟悉的領域</div>
+      <div class="chips">
+        <span class="chip blue">漫畫</span><span class="chip blue">動畫</span><span class="chip blue">電玩</span><span class="chip blue">小說</span><span class="chip blue">電競</span><span class="chip blue">電影</span><span class="chip blue">文化</span>
+      </div>
+      <div class="links">
+        <a class="btn primary" href="#contact">邀約主持</a>
+        <a class="btn" href="https://gnn.gamer.com.tw/3/161313.html" target="_blank" rel="noopener">巴哈姆特專訪 <small>動漫活動主持幕後</small></a>
+        <a class="btn" href="https://www.youtube.com/watch?v=A3UW3q-TjfU" target="_blank" rel="noopener">廣播訪問 <small>《動漫我要聽》第 440 集</small></a>
+      </div>
+    </div>
+    <figure class="photo">
+      <img src="img/yonezawa-mc.jpg" alt="大熊西裝筆挺手持麥克風，在舞台上主持米澤茜粉絲見面會">
+      <figcaption>「動漫主持人大熊」工作照</figcaption>
+    </figure>
+  </header>
+
+  <div class="stats" id="stats"></div>
+
+  <section id="contact">
+    <div class="contact">
+      <div class="contact-intro">
+        <h2>邀約主持</h2>
+        <p>記者會、見面會、音樂會、講座或比賽，歡迎來信或私訊。請附上活動日期、地點、活動類型與來賓，大熊會盡快回覆。</p>
+      </div>
+      <div class="contact-list">
+        <div class="ci">
+          <span class="ci-k">Email</span>
+          <span class="ci-v" id="mail">george71512@gmail.com</span>
+          <button class="copy" type="button" data-copy="mail">複製</button>
+        </div>
+        <div class="ci">
+          <span class="ci-k">Facebook</span>
+          <a class="ci-v" href="https://www.facebook.com/acgdjbigbear/" target="_blank" rel="noopener">動漫主持人大熊</a>
+          <a class="copy" href="https://www.facebook.com/acgdjbigbear/" target="_blank" rel="noopener">私訊粉專</a>
+        </div>
+        <div class="ci">
+          <span class="ci-k">LINE</span>
+          <a class="ci-v" id="line" href="https://line.me/R/ti/p/@georgegod" target="_blank" rel="noopener">@georgegod</a>
+          <button class="copy" type="button" data-copy="line">複製</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="split">
+      <div>
+        <div class="sec-head"><h2>活動類型</h2><p>點一下就能篩選場次</p></div>
+        <div class="cats" id="cats"></div>
+      </div>
+      <div>
+        <div class="sec-head"><h2>每年場次</h2><p>點長條看那一年</p></div>
+        <div class="chart" id="chart"></div>
+        <div class="years" id="years"></div>
+        <div class="label">常合作的主辦單位</div>
+        <div class="orgs" id="orgs"></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>主持現場</h2></div>
+    <div class="gallery">
+      <figure><img src="img/yonezawa-stage.jpg" alt="大熊在 Live House 舞台上帶動觀眾，聲優米澤茜與口譯坐在一旁" loading="lazy"><figcaption>米澤茜見面會，帶動全場互動</figcaption></figure>
+      <figure><img src="img/concert2.jpg" alt="大熊手持麥克風，在管弦樂團前主持音樂會" loading="lazy"><figcaption>管弦樂音樂會主持・導聆</figcaption></figure>
+      <figure><img src="img/concert-selfie.jpg" alt="大熊打著領結，在管弦樂團舞台上自拍" loading="lazy"><figcaption>音樂會開演前，與樂團同台</figcaption></figure>
+      <figure><img src="img/shinkai.jpg" alt="大熊與新海誠導演於簽名會台上抽獎" loading="lazy"><figcaption>電影《言葉之庭》新海誠導演簽名會</figcaption></figure>
+      <figure><img src="img/backstage.jpg" alt="大熊打著領結，在音樂會側台候場" loading="lazy"><figcaption>音樂會側台候場</figcaption></figure>
+      <figure><img src="img/interview.jpg" alt="大熊在簽名會現場訪問排隊的觀眾" loading="lazy"><figcaption>簽名會現場訪問觀眾</figcaption></figure>
+      <figure><img src="img/cosplay.jpg" alt="大熊在舞台上與兩位 Coser 互動" loading="lazy"><figcaption>Cosplay 舞台互動</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="runsheet">
+    <div class="sec-head"><h2>完整主持場次</h2><p>依年份由新到舊排列</p></div>
+    <div class="controls">
+      <label for="q" hidden>搜尋</label>
+      <input id="q" type="search" placeholder="搜尋來賓、作品、主辦單位、場地…">
+      <label for="fk" hidden>活動類型</label>
+      <select id="fk"></select>
+      <label for="fy" hidden>年份</label>
+      <select id="fy"></select>
+      <button class="reset" id="reset" type="button" hidden>清除篩選</button>
+      <span class="count" id="count"></span>
+    </div>
+    <div id="out"></div>
+  </section>
+
+  <footer>
+    場次資料整理自大熊的 <a href="https://docs.google.com/spreadsheets/d/16JUpJajIrZLVr8szsseReAqs9bscdxyi1Db1uNQ9Ow0/edit" target="_blank" rel="noopener">活動主持經歷試算表</a>，更新至 2026 年 11 月。
+  </footer>
+</div>
+
+<script id="data" type="application/json">[{"d":"2014/02/09","t":"《FREE!男子游泳部》 聲優簽名會","g":"島崎信長、代永翼","o":"曼迪傳播","p":"南港展覽館","c":"來賓訪談、簽名會、有獎徵答","k":"聲優"},{"d":"2014/08/08","t":"《飆速宅男》 聲優簽名會","g":"鳥海浩輔、山下大輝","o":"曼迪傳播","p":"台北世貿展覽館","c":"來賓訪談、簽名會、有獎徵答","k":"聲優"},{"d":"2014/08/10","t":"《FREE!男子游泳部》 聲優簽名會","g":"平川大輔","o":"曼迪傳播","p":"台北世貿展覽館","c":"來賓訪談、簽名會","k":"聲優"},{"d":"2014/08/16","t":"台中動漫力 聲優脫口秀","g":"古谷撤","o":"開拓動漫","p":"大台中國際會展中心","c":"來賓脫口秀","k":"聲優"},{"d":"2015/02/14","t":"《Fate/Unlimited Blade》 聲優簽名會","g":"植田佳奈","o":"曼迪傳播","p":"南港展覽館","c":"來賓訪談、簽名會","k":"聲優"},{"d":"2015/02/15","t":"《FREE!男子游泳部》 聲優簽名會","g":"細谷佳正","o":"曼迪傳播","p":"南港展覽館","c":"來賓訪談、簽名會","k":"聲優"},{"d":"2015/02/15","t":"《火影忍者》 聲優簽名會","g":"中村千繪","o":"曼迪傳播","p":"南港展覽館","c":"來賓訪談、簽名會","k":"聲優"},{"d":"2015/08/08","t":"《Fate/stay night》 聲優簽名會","g":"川澄綾子","o":"曼迪傳播","p":"台北世貿展覽館","c":"來賓訪談、簽名會","k":"聲優"},{"d":"2016/02/13","t":"《六花的勇者》 聲優簽名會","g":"日笠陽子","o":"曼迪傳播","p":"南港展覽館","c":"來賓訪談、簽名會","k":"聲優"},{"d":"2016/02/14","t":"《境界的Rinne》 聲優簽名會","g":"木村良平","o":"曼迪傳播","p":"南港展覽館","c":"來賓訪談、簽名會","k":"聲優"},{"d":"2016/06/04","t":"桑島法子 Special Event","g":"桑島法子","o":"曼迪傳播","p":"Neo Studio","c":"來賓脫口秀、小遊戲、簽名會","k":"聲優"},{"d":"2016/08/14","t":"《月刊少女野崎同學》 聲優簽名會","g":"小澤亞李","o":"曼迪傳播","p":"台北世貿展覽館","c":"來賓訪談、簽名會","k":"聲優"},{"d":"2016/08/15","t":"《線上遊戲的老婆不可能是女生？》 聲優簽名會","g":"日高里菜","o":"木棉花國際","p":"台北世貿展覽館","c":"來賓訪談、簽名會","k":"聲優"},{"d":"2017/01/22","t":"斎賀光希+阿部敦 W Event in Taiwan","g":"斎賀みつき、阿部敦","o":"曼迪傳播","p":"花漾HANA展演空間","c":"來賓脫口秀、小遊戲、簽名會","k":"聲優"},{"d":"2017/08/12","t":"《王室教師海涅》 聲優/歌手簽名會","g":"植田圭輔、阪本獎悟","o":"曼迪傳播","p":"台北世貿展覽館","c":"來賓訪談、簽名會","k":"聲優"},{"d":"2017/08/12","t":"《名偵探柯南》 聲優簽名會","g":"小山力也","o":"曼迪傳播","p":"台北世貿展覽館","c":"來賓訪談、簽名會","k":"聲優"},{"d":"2017/08/13","t":"《機甲少女》 聲優簽名會","g":"山崎惠理、阿部里果","o":"木棉花國際","p":"台北世貿展覽館","c":"來賓訪談、簽名會","k":"聲優"},{"d":"2017/11/04","t":"《劇場版 精靈寶可夢 就決定是你了！》 電影映後座談會","g":"松本梨香","o":"曼迪傳播","p":"今日秀泰影城","c":"映後座談","k":"聲優"},{"d":"2018/02/03","t":"《名偵探柯南》 聲優簽名會","g":"山口勝平","o":"曼迪傳播","p":"南港展覽館","c":"來賓訪談、簽名會","k":"聲優"},{"d":"2018/02/03","t":"《黑色五葉草》 聲優簽名會","g":"梶原岳人、島﨑信長、諏訪部順一","o":"曼迪傳播","p":"南港展覽館","c":"來賓訪談、簽名會","k":"聲優"},{"d":"2018/02/04","t":"《王室教師海涅》 聲優簽名會","g":"安達勇人、廣瀨大介","o":"曼迪傳播","p":"南港展覽館","c":"來賓訪談、簽名會","k":"聲優"},{"d":"2018/02/10","t":"《IDOLiSH7-偶像星願-》 聲優簽名會","g":"阿部敦、KENN","o":"曼迪傳播","p":"南港展覽館","c":"來賓訪談、簽名會","k":"聲優"},{"d":"2018/04/28","t":"《文豪野犬DEAD APPLE》 電影映後座談會","g":"上村佑翔","o":"曼迪傳播","p":"板橋大遠百威秀影城","c":"映後座談","k":"聲優"},{"d":"2018/08/18","t":"《庫洛魔法使 透明牌篇》聲優簽名會","g":"久川綾","o":"曼迪傳播","p":"台北世貿展覽館","c":"來賓訪談、簽名會","k":"聲優"},{"d":"2018/08/19","t":"《魔法使的新娘》聲優簽名會","g":"種﨑敦美","o":"曼迪傳播","p":"台北世貿展覽館","c":"來賓訪談、簽名會","k":"聲優"},{"d":"2019/01/20","t":"《劇場版 無敵鐵金剛 / INFINITY》 聲優簽名會","g":"森久保祥太郎","o":"曼迪傳播","p":"南港展覽館","c":"來賓訪談、簽名會","k":"聲優"},{"d":"2019/01/20","t":"《IDOLiSH7 -偶像星願-》聲優見面會","g":"興津和幸","o":"BANDAI NAMCO Online Inc","p":"南港展覽館","c":"來賓訪談、有獎徵答、合作遊戲","k":"聲優"},{"d":"2019/06/23","t":"《歌之☆王子殿下♪》劇場版公開記念聲優見面會","g":"宮野真守","o":"曼迪傳播","p":"三創生活園區 CLAPPER STUDIO","c":"來賓脫口秀、小遊戲","k":"聲優"},{"d":"2019/08/03","t":"《IDOLiSH7 偶像星願》聲優見面會","g":"小野賢章、羽多野涉","o":"曼迪傳播","p":"台北世貿展覽館","c":"來賓脫口秀、小遊戲","k":"聲優"},{"d":"2019/08/04","t":"《魔法水果籃》聲優、作者手渡會","g":"石見舞菜香、高屋奈月","o":"曼迪傳播","p":"台北世貿展覽館","c":"來賓訪談、簽名手渡會","k":"聲優"},{"d":"2020/02/02","t":"《IDOLiSH7 -偶像星願-》新春特別見面會","g":"川原慶久","o":"BANDAI NAMCO Online Inc","p":"南港展覽館","c":"來賓訪談、有獎徵答、合作遊戲","k":"聲優"},{"d":"2022/08/27","t":"閃耀的配音寶藏——人聲百貨營業中","g":"于正昇","o":"漫畫基地","p":"漫畫基地","c":"來賓脫口秀","k":"聲優"},{"d":"2023/08/26","t":"「牧野由依」見面會","g":"牧野由依","o":"台中市政府新聞局","p":"文化部文化資產園區","c":"來賓脫口秀","k":"聲優"},{"d":"2023/02/04","t":"《飆速宅男》聲優森久保祥太郎簽名會","g":"森久保祥太郎","o":"曼迪傳播","p":"台北世貿展覽館","c":"來賓訪談、簽名會","k":"聲優"},{"d":"2024/06/15","t":"「小原好美」台北粉絲見面會","g":"小原好美","o":"海日娛樂傳媒","p":"三創生活園區 SYNTREND SHOW","c":"來賓脫口秀、小遊戲、簽名會","k":"聲優"},{"d":"2024/07/27","t":"《神劍闖江湖 —明治劍客浪漫譚—》聲優見面會","g":"齊藤壯馬、製作人-丹羽將己","o":"曼迪傳播","p":"台北世貿展覽館","c":"來賓訪談、簽名手渡會","k":"聲優"},{"d":"2024/07/28","t":"《現代誤譯》聲優簽名會","g":"浪川大輔、製作人-林玄規","o":"曼迪傳播","p":"台北世貿展覽館","c":"來賓訪談、簽名會","k":"聲優"},{"d":"2024/10/12","t":"「豐崎愛生」粉絲見面會","g":"豐崎愛生","o":"ATC Taiwan","p":"高雄漢神巨蛋","c":"來賓脫口秀、小遊戲、手渡會","k":"聲優"},{"d":"2025/02/08","t":"《筋肉人完美超人始祖篇》聲優 上坂堇聲優見面會","g":"上坂すみれ","o":"回歸線娛樂","p":"南港展覽館","c":"來賓訪談、簽名會","k":"聲優"},{"d":"2025/02/09","t":"《亂馬1/2》聲優簽名會","g":"日高のり子","o":"曼迪傳播","p":"南港展覽館","c":"來賓訪談、簽名會","k":"聲優"},{"d":"2025/02/09","t":"「小原好美」粉絲見面會","g":"小原好美","o":"ATC Taiwan","p":"南港展覽館","c":"來賓訪談、小遊戲、簽名會","k":"聲優"},{"d":"2025/05/11","t":"「石原夏織」FAN MEETING 2025 in Taipei","g":"石原夏織","o":"Welcome Music","p":"Corner House角落文創展演空間","c":"來賓訪談、粉絲提問、小遊戲、合照會","k":"聲優"},{"d":"2025/07/24","t":"《賽馬娘Pretty Derby》聲優見面會","g":"高柳知葉、髙橋ミナミ、矢野妃菜喜、福嶋晴菜","o":"ATC Taiwan","p":"台北世貿展覽館","c":"來賓訪談、Mini Live","k":"聲優"},{"d":"2025/07/26","t":"《Silent Witch 沉默魔女的祕密》聲優見面&簽名會","g":"會澤紗彌、製作人-奈良駿介","o":"曼迪傳播","p":"台北世貿展覽館","c":"來賓訪談、簽名會","k":"聲優"},{"d":"2025/11/09","t":"AKANE YONEZAWA \"Numb show?\"TOUR -Taipei-","g":"米澤茜","o":"宝島制作委員会","p":"MOONDOG","c":"演唱會、來賓訪談、小遊戲、手渡會","k":"聲優"},{"d":"2026/02/06","t":"「工藤晴香」聲優見面會","g":"工藤晴香","o":"ATC Taiwan","p":"南港展覽館","c":"來賓脫口秀、小遊戲、手渡會","k":"聲優"},{"d":"2026/02/07","t":"《藥師少女的獨語》聲優見面會","g":"悠木碧","o":"回歸線娛樂","p":"南港展覽館","c":"來賓訪談、歡送會","k":"聲優"},{"d":"2026/02/07","t":"「伊藤美来」聲優見面會","g":"伊藤美来","o":"ATC Taiwan","p":"南港展覽館","c":"來賓脫口秀、小遊戲、手渡會","k":"聲優"},{"d":"2026/02/08","t":"《貴族轉生～得天眷顧 一出生就獲得最強力量～》聲優見面會","g":"奈波果林、宮下早紀","o":"回歸線娛樂","p":"南港展覽館","c":"來賓訪談、手渡會","k":"聲優"},{"d":"2026/03/22","t":"前島亞美 粉絲見面會 2026 in 台北","g":"前島亞美","o":"宝島制作委員会","p":"MOONDOG","c":"演唱會、來賓訪談、小遊戲、手渡會","k":"聲優"},{"d":"2026/05/23","t":"結那 Fan Meeting in Taipei 2026","g":"結那","o":"宝島制作委員会","p":"MOONDOG","c":"演唱會、來賓訪談、小遊戲、手渡會","k":"聲優"},{"d":"2026/06/13","t":"NagiSalon 2026 青山渚 粉絲見面會","g":"青山なぎさ","o":"梵思娛樂","p":"三創生活園區 CLAPPER STUDIO","c":"來賓脫口秀、小遊戲、Mini Live、簽名會","k":"聲優"},{"d":"2026/07/26","t":"GCC x KP 2nd Voyage in Taipei","g":"代永翼、阿部敦","o":"古德文創","p":"花漾HANA展演空間","c":"來賓脫口秀、小遊戲、簽名會","k":"聲優"},{"d":"2026/07/26","t":"IDOLiSH7-偶像星願- in 2026 台北漫博 特別登壇活動","g":"代永翼、阿部敦","o":"BANDAI NAMCO Online Inc","p":"台北世貿展覽館","c":"來賓訪談、小遊戲、現場配音","k":"聲優"},{"d":"2026/10/03","t":"小原好美 Fan Meeting in Taipei 2026 feats. 古賀葵","g":"小原好美、古賀葵","o":"梵思娛樂","p":"三創生活園區 CLAPPER STUDIO","c":"來賓脫口秀、小遊戲、特典會","k":"聲優"},{"d":"2026/10/17","t":"TSUMUGI RISA FAN MEETING 2026 in TAIPEI","g":"紡木吏佐","o":"鳴音合創有限公司","p":"TAIPEI WESTAR","c":"來賓脫口秀、小遊戲、特典會","k":"聲優"},{"d":"2026/11/07","t":"工藤晴香2026 台北粉絲見面會","g":"工藤晴香","o":"梵思娛樂","p":"三創生活園區 CLAPPER STUDIO","c":"來賓脫口秀、小遊戲、特典會","k":"聲優"},{"d":"2026/11/21","t":"伊波杏樹 Asia Fan Meeting Tour 台北場","g":"伊波杏樹","o":"梵思娛樂","p":"三創生活園區 CLAPPER STUDIO","c":"來賓脫口秀、小遊戲、Mini Live、特典會","k":"聲優"},{"d":"2016/12/11","t":"黑羽麻璃央 粉絲見面會","g":"黑羽麻璃央","o":"享娛樂","p":"台大體育館225&226教室","c":"來賓訪談、粉絲提問、小遊戲","k":"演員、偶像、歌手"},{"d":"2017/05/07","t":"小南光司ｘ赤澤遼太郎 台北見面會","g":"小南光司、赤澤遼太郎","o":"Eternity Faith永恆信念","p":"集思台大會議中心","c":"來賓訪談、粉絲提問、小遊戲","k":"演員、偶像、歌手"},{"d":"2017/05/14","t":"舞台劇《偶像夢幻祭！On・Stage》~Take your marks~放映會既粉絲見面會","g":"小南光司、前山剛久、瑛","o":"Eternity Faith永恆信念","p":"喜滿客京華影城8廳","c":"映後座談","k":"演員、偶像、歌手"},{"d":"2017/06/11","t":"財木琢磨 粉絲見面會","g":"財木琢磨","o":"Eternity Faith永恆信念","p":"台灣師範大學-教育大樓201演講廳","c":"來賓訪談、粉絲提問、小遊戲","k":"演員、偶像、歌手"},{"d":"2017/08/05","t":"和田琢磨 粉絲見面會","g":"和田琢磨","o":"享娛樂","p":"集思台大會議中心國際會議廳","c":"來賓訪談、粉絲提問、小遊戲、握手會","k":"演員、偶像、歌手"},{"d":"2017/10/01","t":"舞台劇《刀劍亂舞 義傳 曉之獨眼龍》放映會既粉絲見面會","g":"荒牧慶彥、東啓介","o":"Eternity Faith永恆信念","p":"松菸誠品展演廳","c":"映後座談","k":"演員、偶像、歌手"},{"d":"2017/11/18","t":"音樂劇《義呆利～in the new world～》放映會既粉絲見面會","g":"長江崚行、廣瀨大介","o":"Eternity Faith永恆信念","p":"台北真善美劇院","c":"映後座談","k":"演員、偶像、歌手"},{"d":"2017/12/16","t":"小澤廉 台北見面會","g":"小澤廉","o":"享娛樂","p":"劍潭青年活動中心 318階梯教室","c":"來賓訪談、粉絲提問、小遊戲、合照會","k":"演員、偶像、歌手"},{"d":"2018/02/11","t":"崎山翼 台北粉絲見面會","g":"崎山翼","o":"金木音樂有限公司","p":"松菸誠品展演廳","c":"來賓訪談、粉絲提問、小遊戲、合照會","k":"演員、偶像、歌手"},{"d":"2018/03/04","t":"北園涼 台北見面合照會","g":"北園涼","o":"享娛樂","p":"後台Backstage Café","c":"來賓訪談、粉絲提問、小遊戲、合照會","k":"演員、偶像、歌手"},{"d":"2018/04/21","t":"高崎翔太 台灣粉絲見面會","g":"高崎翔太","o":"VELstars星舟工作室","p":"臺北捷運行政大樓B1 捷韻國際廳","c":"來賓訪談、粉絲提問、小遊戲、合照會","k":"演員、偶像、歌手"},{"d":"2018/06/23","t":"谷佳樹 台灣粉絲見面會","g":"谷佳樹","o":"Eternity Faith永恆信念","p":"後台Backstage Café","c":"來賓訪談、粉絲提問、小遊戲、合照會","k":"演員、偶像、歌手"},{"d":"2018/08/12","t":"土井一海 台北見面會","g":"土井一海","o":"享娛樂","p":"後台Backstage Café","c":"來賓訪談、粉絲提問、小遊戲、合照會","k":"演員、偶像、歌手"},{"d":"2018/08/25","t":"廣瀨智紀 2018台灣見面會","g":"廣瀨智紀","o":"海日娛樂傳媒","p":"花漾HANA展演空間","c":"來賓訪談、粉絲提問、小遊戲、握手會","k":"演員、偶像、歌手"},{"d":"2018/09/02","t":"小池徹平 台北見面會 + Solo Mini Live","g":"小池徹平","o":"享娛樂","p":"Neo Studio","c":"來賓訪談、粉絲提問、小遊戲、擊掌會","k":"演員、偶像、歌手"},{"d":"2018/11/18","t":"「貓男友」攝影展+染谷俊之見面會","g":"染谷俊之","o":"Eternity Faith永恆信念","p":"後台Backstage Café","c":"來賓訪談、粉絲提問、小遊戲、握手會","k":"演員、偶像、歌手"},{"d":"2019/07/27","t":"黑羽麻璃央 台北粉絲見面會 2019","g":"黑羽麻璃央","o":"長運公關","p":"SyntrendShow三創生活園區 12 F","c":"來賓訪談、粉絲提問、小遊戲、手渡會、合照會","k":"演員、偶像、歌手"},{"d":"2019/08/03","t":"乃木恋玩家見面會","g":"乃木坂46 (齋藤飛鳥、堀未央奈、梅澤美波)","o":"So-Net","p":"光點台北","c":"來賓訪談、粉絲提問、小遊戲","k":"演員、偶像、歌手"},{"d":"2019/09/07","t":"北園涼 亞洲粉絲見面會 2019 台北場","g":"北園涼","o":"Welcome Music","p":"Corner House角落文創展演空間","c":"來賓訪談、粉絲提問、小遊戲、合照會","k":"演員、偶像、歌手"},{"d":"2019/12/07","t":"鷲尾修斗生日見面會 in 台北","g":"鷲尾修斗","o":"Eternity Faith永恆信念","p":"後台Backstage Café","c":"來賓訪談、粉絲提問、小遊戲、擊掌會、合照會","k":"演員、偶像、歌手"},{"d":"2024/02/01","t":"Yoyoyo-chan 海外首秀","g":"Yoyoyo-chan","o":"ATC Taiwan","p":"台北世貿展覽館","c":"來賓訪談、小遊戲、演唱會","k":"演員、偶像、歌手"},{"d":"2025/12/20","t":"2025 遊馬晃祐台北粉絲見面會","g":"遊馬晃祐","o":"宝島制作委員会","p":"MOONDOG","c":"來賓訪談、粉絲提問、小遊戲、合照會","k":"演員、偶像、歌手"},{"d":"2026/01/18","t":"笹森裕貴/立花裕大/雷太「僕たちのふゆやすみin台湾」","g":"笹森裕貴、立花裕大、雷太","o":"SMILE WORKS","p":"福華文教會館 卓越堂","c":"來賓訪談、粉絲提問、小遊戲","k":"演員、偶像、歌手"},{"d":"2026/06/20","t":"2026大槻響 In Taipei～華麗夜宴♡Gorgeous Party Night♡","g":"大槻響","o":"白金之星音樂娛樂股份有限公司","p":"Club One","c":"來賓訪談、小遊戲、合照會、互動會","k":"演員、偶像、歌手"},{"d":"2026/07/18","t":"阿久津仁愛 FAN MEETING 2026 in Taipei","g":"阿久津仁愛","o":"宝島制作委員会","p":"MOONDOG","c":"來賓訪談、粉絲提問、小遊戲、合照會","k":"演員、偶像、歌手"},{"d":"2026/07/19","t":"Ryuichi Ogata fan meeting in Taipei 2026","g":"緒方龍一","o":"宝島制作委員会","p":"MOONDOG","c":"來賓訪談、粉絲提問、小遊戲、手渡會","k":"演員、偶像、歌手"},{"d":"2026/07/24","t":"ATC Special Stage 22/7 粉絲見面會","g":"22/7","o":"ATC Taiwan","p":"台北世貿展覽館","c":"來賓訪談、小遊戲、演唱會","k":"演員、偶像、歌手"},{"d":"2026/08/23","t":"遊馬晃祐 ASUMA KOSUKE See You Again in Taipei 2026","g":"遊馬晃祐","o":"宝島制作委員会","p":"MOONDOG","c":"來賓訪談、粉絲提問、小遊戲、合照會","k":"演員、偶像、歌手"},{"d":"2026/08/29","t":"橘メアリー 1st mini live & fan meeting","g":"橘メアリー","o":"DOKIDOKI","p":"MOONDOG","c":"來賓訪談、粉絲提問、小遊戲、合照會","k":"演員、偶像、歌手"},{"d":"2026/10/10","t":"藤岡弘、&天翔天音 1st Fanmeeting in Taiwan","g":"藤岡弘、天翔天音","o":"星空創新娛樂","p":"Y17 6樓國際會議廳","c":"來賓訪談、粉絲提問、擊掌會、合照會、簽名會","k":"演員、偶像、歌手"},{"d":"2018/02/03","t":"輕小說《魔法師的乙女冒險》作者簽名會","g":"作者-夢空","o":"長鴻出版社","p":"南港展覽館","c":"來賓訪談、簽名會、有獎徵答","k":"漫畫家、作者"},{"d":"2018/04/05","t":"漫畫《熊愛蜂蜜》作者簽名會","g":"漫畫家-由希","o":"長鴻出版社","p":"高雄巨蛋","c":"來賓訪談、簽名會、有獎徵答","k":"漫畫家、作者"},{"d":"2018/08/17","t":"漫畫《虎穴廚房》作者簽名會","g":"漫畫家-元ハルヒラ","o":"青文出版社","p":"台北世貿展覽館","c":"來賓訪談、簽名會","k":"漫畫家、作者"},{"d":"2018/08/19","t":"漫畫《CANIS》作者簽名會","g":"漫畫家-ZAKK","o":"青文出版社","p":"台北世貿展覽館/Animate台北店","c":"來賓訪談、簽名會","k":"漫畫家、作者"},{"d":"2019/01/20","t":"漫畫《被雙胞胎兒子同時盯上了》作者簽名會","g":"漫畫家-佳門サエコ","o":"青文出版社","p":"南港展覽館","c":"來賓訪談、簽名會","k":"漫畫家、作者"},{"d":"2019/01/20","t":"漫畫《百與卍》作者簽名會","g":"漫畫家-紗久楽さわ","o":"台灣東販","p":"南港展覽館","c":"來賓訪談、簽名會","k":"漫畫家、作者"},{"d":"2019/08/01","t":"小說《給外科主任的過度保護指示書》作者簽名會","g":"作者-紫曜日、插畫家-黑色豆腐","o":"東立出版社","p":"台北世貿展覽館","c":"來賓訪談、簽名會","k":"漫畫家、作者"},{"d":"2019/08/02","t":"漫畫《向花開魔女表白》作者簽名會","g":"漫畫家-キタハラリイ","o":"東立出版社","p":"台北世貿展覽館","c":"來賓訪談、簽名會","k":"漫畫家、作者"},{"d":"2019/08/04","t":"台灣原創漫畫平台「GO 原漫基地」上線聯合簽名會","g":"漫畫家-LONLON、NIN、ROCKAT 搖滾貓、英張、蚩尤、捲貓、簡嘉誠、張季雅、寶總監、柚子、黃俊維、李鴻欽、睡相後移","o":"蓋亞文化","p":"台北世貿展覽館","c":"來賓訪談、簽名會","k":"漫畫家、作者"},{"d":"2020/02/01","t":"漫畫《少年與神隱》作者簽名會","g":"漫畫家-ゆき林檎","o":"青文出版社","p":"南港展覽館","c":"來賓訪談、簽名會","k":"漫畫家、作者"},{"d":"2020/02/02","t":"漫畫《發現美好戀情》作者簽名會","g":"漫畫家-ひなこ","o":"青文出版社","p":"南港展覽館","c":"來賓訪談、簽名會","k":"漫畫家、作者"},{"d":"2020/11/21","t":"漫畫《雲之獸：來自遠古的守護者》漫畫創作分享會","g":"漫畫家-漢堡包、國立臺灣博物館典藏管理組副研究員-林俊聰、國立臺灣博物館教育推廣組長-黃星達","o":"蓋亞文化","p":"國立台灣博物館","c":"來賓訪談、簽名會","k":"漫畫家、作者"},{"d":"2022/07/30","t":"插畫《獨占視線 兔姬明信片書》繪師簽名會","g":"插畫家-兔姬","o":"台灣角川","p":"台北世貿展覽館","c":"來賓訪談、簽名會","k":"漫畫家、作者"},{"d":"2024/08/24","t":"詭故事-漫画怪談講座","g":"漫畫家-爛貨習作、作家-醉琉璃、漫畫家-藥島","o":"國家漫畫博物館","p":"台灣漫畫博物館","c":"來賓訪談","k":"漫畫家、作者"},{"d":"2025/02/08","t":"小說《極深空計畫》 作者、繪師聯合簽名會","g":"作者-月亮熊、作者-吐維、繪師-白靈子","o":"東立出版社","p":"南港展覽館","c":"來賓訪談、簽名會","k":"漫畫家、作者"},{"d":"2025/07/26","t":"小說《彈珠汽水瓶裡的千歲同學》作者、繪師簽名會","g":"作者-裕夢、繪師- raemz","o":"東立出版社","p":"台北世貿展覽館","c":"來賓訪談、簽名會、有獎徵答","k":"漫畫家、作者"},{"d":"2026/02/08","t":"小說《隔壁的冬歌同學只在意我》 作者、繪師聯合簽名會","g":"作者-Irene309、繪師-白靈子","o":"東立出版社","p":"南港展覽館","c":"來賓訪談、簽名會","k":"漫畫家、作者"},{"d":"2026/07/23","t":"漫畫《雷雷雷》作者簽名會","g":"漫畫家-ヨシアキ","o":"東立出版社","p":"台北世貿展覽館","c":"來賓訪談、簽名會、有獎徵答","k":"漫畫家、作者"},{"d":"2016/09/11","t":"《Thunderbolt Fantasy 東離劍遊記》感謝祭","g":"西川貴教、關智一、檜山修之、鳥海浩輔、虛淵玄","o":"霹靂國際多媒體","p":"Neo Studio","c":"來賓訪談、粉絲互動遊戲","k":"布袋戲"},{"d":"2017/02/01","t":"《Thunderbolt Fantasy 東離劍遊記》座談會","g":"虛淵玄","o":"霹靂國際多媒體","p":"三創生活園區 3F Syntrend Space","c":"來賓訪談、簽名會","k":"布袋戲"},{"d":"2018/04/29","t":"霹靂布袋戲「蓮華誕」還真30慶典","g":"素還真、風采鈴","o":"霹靂國際多媒體","p":"華山Legacy","c":"金氏世界紀錄認證、新作發表、慶生會、粉絲互動遊戲","k":"布袋戲"},{"d":"2018/12/23","t":"《Thunderbolt Fantasy 東離劍遊記2》最終章搶先特映會","g":"殤不患、凜雪鴉、浪巫謠、蠍瓔珞、嘯狂狷、諦空、婁震戒、丹翡、殺無生","o":"霹靂國際多媒體","p":"台北西門町樂聲影城","c":"最終章放映、特典訊息、本尊偶見面合照","k":"布袋戲"},{"d":"2019/10/25","t":"《Thunderbolt Fantasy 西幽玹歌》特映會","g":"浪巫謠、睦天命、咒旬瘖、嘲風、啖劍太歲、嘯狂狷","o":"霹靂國際多媒體","p":"欣欣秀泰影城","c":"電影放映、來賓致詞、本尊偶見面會","k":"布袋戲"},{"d":"2021/02/04","t":"《Thunderbolt Fantasy 東離劍遊記3》座談會","g":"虛淵玄、黃亮勛","o":"霹靂國際多媒體","p":"台北世貿展覽館","c":"新作發表、來賓訪談","k":"布袋戲"},{"d":"2025/02/15","t":"《Thunderbolt Fantasy Project》粉絲感謝祭","g":"鳥海浩輔、諏訪部順一、西川貴教、釘宮理惠、虛淵玄","o":"霹靂國際多媒體","p":"TAIPEI WESTAR","c":"來賓訪談、粉絲互動遊戲、現場配音、有獎徵答","k":"布袋戲"},{"d":"2013/08/18","t":"電影《言葉之庭》導演簽名會","g":"導演-新海誠","o":"曼迪傳播","p":"台北世貿展覽館","c":"來賓訪談、簽名會、有獎徵答","k":"電視、電影"},{"d":"2014/01/04","t":"電影《夢見》導演映後座談","g":"導演-肯特","o":"開拓動漫","p":"in89豪華數位影城","c":"映後座談","k":"電視、電影"},{"d":"2017/09/03","t":"『我在快打求旋風』電影放映會暨映後座談","g":"小向GamerBee","o":"高雄市電影館","p":"高雄市立圖書館總館","c":"映後座談、格鬥比賽轉播","k":"電視、電影"},{"d":"2018/08/16","t":"電影《未來的未來》導演座談會","g":"導演-細田守","o":"傳影互動","p":"台北世貿展覽館","c":"來賓脫口秀","k":"電視、電影"},{"d":"2018/08/18","t":"電影《失憶的總理大臣》導演映後座談","g":"導演-三谷幸喜","o":"傳影互動","p":"誠品電影院、信義威秀、國賓影城@長春廣場","c":"映後座談","k":"電視、電影"},{"d":"2022/01/11","t":"「日影經典」「昭和女神殿」主題影展記者會","g":"日本台灣交流協會高雄事務所所長 加藤英次","o":"高雄市電影館","p":"高雄市電影館","c":"記者會","k":"電視、電影"},{"d":"2022/08/23","t":"KFILM記憶製造所：高雄市電影館20週年紀念展","g":"導演-郭南宏","o":"高雄市電影館","p":"高雄市電影館","c":"記者會","k":"電視、電影"},{"d":"2023/03/15","t":"【異色大師的情慾世界：增村保造】記者會","g":"日本台灣交流協會高雄事務所所長-小野一彥","o":"高雄市電影館","p":"內惟藝術文化中心","c":"記者會","k":"電視、電影"},{"d":"2023/03/23","t":"【凝視時代－悲情城市影像展】記者會","g":"時任副總統 賴清德、時任高雄市長 陳其邁、時任高雄市文化局局長 王文翠","o":"高雄市電影館","p":"高雄市電影館","c":"記者會","k":"電視、電影"},{"d":"2023/10/09","t":"【男生男生配】全球首映會","g":"","o":"高雄市電影館","p":"內惟藝術文化中心","c":"映後座談","k":"電視、電影"},{"d":"2024/04/13","t":"新加坡電影節","g":"導演-陳子謙、吳旻修","o":"高雄市電影館","p":"高雄市電影館","c":"記者會","k":"電視、電影"},{"d":"2024/07/12","t":"【森田芳光導演回顧展】記者會","g":"導演遺孀-三澤和子","o":"高雄市電影館","p":"內惟藝術文化中心","c":"記者會","k":"電視、電影"},{"d":"2025/10/12","t":"《ACTION! 坂本浩一 的武打動作之道》","g":"導演-坂本浩一、特技演員-中村浩二、安川桃香","o":"特製隊","p":"月讀館貝洛音樂中心","c":"來賓訪談、粉絲提問、簽名會、合照會","k":"電視、電影"},{"d":"2026/09/27","t":"2026 特講祭｜特攝導演 × 幕後工作者 講座系列","g":"導演-田﨑竜太、動作導演-藤田慧、假面騎士 MY-TH","o":"特製隊","p":"典空間","c":"來賓訪談、粉絲提問、簽名會、合照會","k":"電視、電影"},{"d":"2014/05/11","t":"2014年 台灣Cosplay超級慶典","g":"","o":"新竹縣政府","p":"新竹縣文化局演藝廳","c":"Cosplay比賽","k":"Cosplay"},{"d":"2015/01/28","t":"粉墨登場20年—台灣舞台Cosplay的進化史講座活動","g":"","o":"開拓動漫","p":"花博爭豔館","c":"Cosplay講座","k":"Cosplay"},{"d":"2015/02/01","t":"2015年 Cosplay Invitational 國際交流示範賽","g":"","o":"開拓動漫","p":"花博爭豔館","c":"Cosplay比賽","k":"Cosplay"},{"d":"2016/03/27","t":"第二屆開拓國際Cosplay交流大賽Taiwan COSPLAY 高峰會國際交流選拔賽","g":"","o":"WCS 台灣","p":"三創生活園區","c":"Cosplay比賽","k":"Cosplay"},{"d":"2016/08/27","t":"統一發票推行暨『我是主角』租稅宣導活動Cosplay大賽","g":"","o":"財政部台北國稅局","p":"台北花博公園","c":"Cosplay比賽","k":"Cosplay"},{"d":"2017/04/16","t":"2017年 WCS台灣代表選拔賽","g":"","o":"WCS 台灣","p":"花博爭豔館","c":"Cosplay比賽","k":"Cosplay"},{"d":"2017/08/27","t":"2017年 夏戀高捷動漫祭Cosplay大賽","g":"","o":"高雄捷運公司","p":"高雄捷運美麗島站","c":"Cosplay比賽","k":"Cosplay"},{"d":"2017/09/09","t":"2017年 魅力商圈Cosplay藝能大賞","g":"","o":"高雄市新興區公所","p":"新崛江商圈","c":"Cosplay比賽","k":"Cosplay"},{"d":"2018/05/20","t":"2018年 WCS台灣代表選拔賽","g":"","o":"WCS 台灣","p":"花博爭豔館","c":"Cosplay比賽","k":"Cosplay"},{"d":"2018/06/17","t":"2018 第七屆TSCC台灣超級COSPLAY慶典","g":"","o":"台灣cosplay藝術推廣協會","p":"劍湖山王子飯店","c":"選手遊行、晚會表演、COSPLAY比賽","k":"Cosplay"},{"d":"2018/08/26","t":"2018年 夏戀高捷動漫祭Cosplay大賽","g":"","o":"高雄捷運公司","p":"高雄捷運美麗島站","c":"Cosplay比賽","k":"Cosplay"},{"d":"2020/10/17","t":"台灣少女X歷史 Cosplay大賽","g":"","o":"國立台灣歷史博物館","p":"國立台灣歷史博物館","c":"Cosplay比賽","k":"Cosplay"},{"d":"2023/08/15","t":"Fancy Frontier 41","g":"伊織萌","o":"開拓動漫","p":"花博爭豔館","c":"來賓脫口秀","k":"Cosplay"},{"d":"2024/04/03","t":"あかせあかり粉絲見面會","g":"あかせあかり","o":"ATC Taiwan","p":"台中國際展覽館","c":"來賓訪談、小遊戲、演唱會","k":"Cosplay"},{"d":"2024/04/20","t":"NCF1 成大蒼繡月","g":"","o":"成功大學漫畫社","p":"成功大學","c":"偶像演出、COSPLAY比賽、隨舞","k":"Cosplay"},{"d":"2025/04/26","t":"「來自書中的你」Cosplay競賽","g":"","o":"台南市立圖書館","p":"台南市立圖書館","c":"Cosplay比賽","k":"Cosplay"},{"d":"2025/08/10","t":"「怪獸8號」Cosplayer見面會","g":"","o":"高雄夢時代百貨","p":"高雄夢時代百貨","c":"合照","k":"Cosplay"},{"d":"2025/08/25","t":"Fancy Frontier 45","g":"にゃるまー。","o":"開拓動漫","p":"花博爭豔館","c":"來賓脫口秀","k":"Cosplay"},{"d":"2026/04/11","t":"ACOSTA!@高雄","g":"","o":"udn","p":"夢時代購物中心","c":"「CDEF」Cosplay舞台表演","k":"Cosplay"},{"d":"2026/05/17","t":"Petit Frontier 44","g":"にゃるまー。","o":"開拓動漫","p":"花博爭豔館","c":"來賓脫口秀","k":"Cosplay"},{"d":"2026/09/06","t":"「我獨自升級」Cosplayer見面會","g":"孤獨牙敗、","o":"高雄夢時代百貨","p":"高雄夢時代百貨","c":"合照","k":"Cosplay"},{"d":"2026/09/25","t":"2026 WirForce Cosplay大賽","g":"みぃこ","o":"4Gamers","p":"台北世貿展覽館","c":"Cosplay比賽","k":"Cosplay"},{"d":"2011/12/03","t":"2011高雄駁二動漫祭","g":"桃井はるこ、荒山亮","o":"高雄市政府文化局","p":"高雄駁二藝術特區","c":"動漫樂團大賽、聲優脫口秀","k":"記者會、大型活動"},{"d":"2013/11/16","t":"2013台中動漫力","g":"","o":"台中市政府文化局","p":"台中國際會展中心","c":"記者會、COSPLAY比賽","k":"記者會、大型活動"},{"d":"2013/12/21","t":"2013高雄駁二動漫祭","g":"悠木碧","o":"高雄市政府文化局","p":"高雄駁二藝術特區","c":"COSPLAY比賽、聲優脫口秀","k":"記者會、大型活動"},{"d":"2014/03/08","t":"wing stage 23","g":"二胡桐子","o":"WS動漫遊戲創作展","p":"高雄國際會議中心","c":"動漫樂團、舞團表演、ACG猜謎","k":"記者會、大型活動"},{"d":"2014/08/16","t":"2014台中動漫力","g":"古谷徹","o":"台中市政府新聞局","p":"台中國際會展中心","c":"開幕記者會、COSPLAY比賽、聲優脫口秀","k":"記者會、大型活動"},{"d":"2014/11/15","t":"2014高雄駁二動漫祭","g":"佐藤聰美、水瀨いのり","o":"高雄市政府文化局","p":"高雄駁二藝術特區","c":"動漫樂團演出、COSPLAY比賽、微漫畫頒獎典禮","k":"記者會、大型活動"},{"d":"2015/07/04","t":"wing stage 27","g":"","o":"WS動漫遊戲創作展","p":"高雄國際會議中心","c":"動漫樂團、舞團表演、ACG猜謎、競標拍賣","k":"記者會、大型活動"},{"d":"2015/07/04","t":"夏戀高捷動漫季-Cosplay mini Live","g":"","o":"高雄捷運股份公司","p":"高雄捷運O9技擊館站","c":"COSPLAY比賽","k":"記者會、大型活動"},{"d":"2015/07/31","t":"夏戀高捷動漫季-高捷少女奈奈擬跨見面會","g":"","o":"高雄捷運股份公司","p":"高雄捷運R10O5美麗島站","c":"記者會","k":"記者會、大型活動"},{"d":"2015/08/01","t":"2015台中動漫力","g":"","o":"台中市政府新聞局","p":"台中國際會展中心","c":"開幕記者會、COSPLAY比賽","k":"記者會、大型活動"},{"d":"2015/11/29","t":"2015高雄駁二動漫祭","g":"中田讓治、いとうかなこ","o":"高雄市政府文化局","p":"高雄駁二藝術特區","c":"動漫樂團演出、COSPLAY比賽、微漫畫頒獎典禮","k":"記者會、大型活動"},{"d":"2016/02/01","t":"Wing Stage TAIPEI 01","g":"","o":"WS動漫遊戲創作展","p":"台大體育館","c":"動漫樂團、舞團、歌手表演、ACG猜謎、競標拍賣、座談會","k":"記者會、大型活動"},{"d":"2016/07/10","t":"2016桃園動漫舞展","g":"","o":"桃園市政府文化局","p":"桃園展演中心","c":"動漫舞團表演","k":"記者會、大型活動"},{"d":"2016/07/23","t":"夏戀高捷動漫祭Mini Live","g":"","o":"高雄捷運股份公司","p":"高雄捷運R10O5美麗島站","c":"動漫舞團、歌手演出","k":"記者會、大型活動"},{"d":"2016/11/26","t":"2016高雄駁二動漫祭","g":"石原夏織、淺倉杏美、吉川友","o":"高雄市政府文化局","p":"高雄駁二藝術特區","c":"動漫樂團演出、COSPLAY比賽、微漫畫頒獎典禮、聲優脫口秀","k":"記者會、大型活動"},{"d":"2017/04/28","t":"台北市動漫嘉年華 記者會","g":"","o":"台北市政府觀光傳播局","p":"台北市政府1樓中庭","c":"記者會","k":"記者會、大型活動"},{"d":"2017/11/25","t":"2017高雄駁二動漫祭","g":"田村ゆかり、西沢幸奏","o":"高雄市政府文化局","p":"高雄駁二藝術特區","c":"動漫樂團演出、COSPLAY比賽、微漫畫頒獎典禮","k":"記者會、大型活動"},{"d":"2018/05/03","t":"《K’WA空與Hooya歌手創生計畫》記者會","g":"","o":"KKBOX","p":"KKBOX","c":"記者會","k":"記者會、大型活動"},{"d":"2018/05/05","t":"魅力新興動漫嘉年華","g":"","o":"高雄市新興區公所","p":"新崛江商圈","c":"動漫舞團表演、知名Cosplayer見面會","k":"記者會、大型活動"},{"d":"2018/07/14","t":"台中國際動漫博覽會","g":"いとうかなこ、本多真梨子","o":"台中市政府新聞局","p":"台中文化創意產業園區","c":"歌手演唱、樂團表演、聲優脫口秀","k":"記者會、大型活動"},{"d":"2018/07/15","t":"桃園國際動漫大展 超級戰隊演唱會","g":"高木洋、高取秀明、高取伸和、籠島裕昌、池田彩、大西洋平、伊勢大貴","o":"桃園市政府文化局","p":"桃園展演中心","c":"來賓訪談、演唱會、握手會","k":"記者會、大型活動"},{"d":"2018/07/15","t":"桃園國際動漫大展 動漫表演嘉年華","g":"","o":"桃園市政府文化局","p":"桃園展演中心","c":"動漫樂團表演","k":"記者會、大型活動"},{"d":"2018/08/10","t":"「野球風雲錄@台北」特展 記者會","g":"陳金鋒、鍾孟舜","o":"台北市政府觀光傳播局","p":"台北探索館","c":"記者會","k":"記者會、大型活動"},{"d":"2018/08/28","t":"107年台北探索館小志工研習營成果發表會","g":"","o":"台北市政府觀光傳播局","p":"台北市政府1樓中庭","c":"記者會","k":"記者會、大型活動"},{"d":"2018/11/10","t":"美麗新興動漫嘉年華2","g":"台灣雅典娜 陳思妏","o":"高雄市新興區公所","p":"新崛江商圈","c":"動漫舞團、歌手演出","k":"記者會、大型活動"},{"d":"2018/12/15","t":"2018高雄駁二動漫祭","g":"五條真由美、三上枝織","o":"高雄市政府文化局","p":"高雄駁二藝術特區","c":"動漫樂團演出、COSPLAY比賽、微漫畫頒獎典禮","k":"記者會、大型活動"},{"d":"2019/11/23","t":"2019高雄駁二動漫祭","g":"谷本貴義、井上喜久子、井上ほの花","o":"高雄市政府文化局","p":"高雄駁二藝術特區","c":"動漫樂團/舞團演出、COSPLAY比賽、微漫畫頒獎典禮、講座","k":"記者會、大型活動"},{"d":"2019/04/14","t":"2019台北國際加盟連鎖大展","g":"AKB48 TEAM TP","o":"謝謝珍珠、茶之一","p":"台北世貿展覽館","c":"來賓訪談","k":"記者會、大型活動"},{"d":"2020/05/28","t":"打造台灣圖像創作經濟力 台灣漫畫基地嶄新開幕茶會","g":"文化部政務次長彭俊亨、文化內容策進院院長胡晴舫、立法委員賴品妤、立法委員蘇巧慧、創作者麥仁杰、創作者阮光民、創作者艾利柚...","o":"文化內容策進院","p":"台灣漫畫基地","c":"記者會","k":"記者會、大型活動"},{"d":"2020/09/25","t":"滲透次元壁-臺日漫畫美學當代藝術特展臺北記者會","g":"文化部部長李永得、國立臺灣美術館林志明","o":"國立臺灣美術館","p":"台灣漫畫基地","c":"記者會","k":"記者會、大型活動"},{"d":"2021/10/30","t":"2021台中國際動漫博覽會 虛擬X現實偶像演唱會","g":"杏仁咪嚕、蘭希、雨宮夢、LUMINA、雲之上夢見、平平子、兔姬、Ruka Banana、Re:TurN-Circus- 、Karei & ooo、台湾人の永琳、CANDY☆STAR 、月讀偶像部Twinkle Twinkle、セイ星文","o":"台中市政府新聞局","p":"台中國際動漫博覽會FB直播","c":"動漫偶像、歌手演出、VT演出、VT脫口秀","k":"記者會、大型活動"},{"d":"2021/11/27","t":"2020高雄駁二動漫祭","g":"高取秀明、高梨康治、田野麻美、本渡楓","o":"高雄市政府文化局","p":"高雄駁二藝術特區","c":"動漫樂團/舞團演出、COSPLAY比賽、微漫畫頒獎典禮、講座","k":"記者會、大型活動"},{"d":"2022/08/23","t":"2022台中國際動漫博覽會","g":"","o":"台中市政府新聞局","p":"台中火車站前廣場","c":"動漫電音音樂PARTY","k":"記者會、大型活動"},{"d":"2022/08/24","t":"2022桃園漫畫節","g":"","o":"桃園市政府文化局","p":"馬祖新村","c":"動漫音樂演唱會","k":"記者會、大型活動"},{"d":"2022/11/19","t":"2022高雄駁二動漫祭","g":"","o":"高雄市政府文化局","p":"高雄駁二藝術特區","c":"動漫樂團/舞團演出、COSPLAY比賽、微漫畫頒獎典禮、講座","k":"記者會、大型活動"},{"d":"2023/11/12","t":"2023ACE動漫創作展","g":"","o":"魔競娛樂","p":"南港展覽館","c":"動漫DJ表演、講座、動漫偶像","k":"記者會、大型活動"},{"d":"2023/12/16","t":"2023高雄駁二動漫祭","g":"大西洋平","o":"高雄市政府文化局","p":"高雄駁二藝術特區","c":"動漫樂團/舞團演出、COSPLAY比賽、微漫畫頒獎典禮...","k":"記者會、大型活動"},{"d":"2024/03/08","t":"Manga・北齋・漫畫：從現代日本漫畫看『北斎漫画』","g":"","o":"高雄市政府文化局、日本國際交流基金會、日本台灣交流協會高雄事務所","p":"高雄駁二藝術特區","c":"記者會","k":"記者會、大型活動"},{"d":"2024/03/22","t":"2024 ACGN 創作者聯合春酒","g":"巴西之吻、宅邦戰隊","o":"芒果派對","p":"WESATR","c":"動漫DJ表演、互動遊戲、動漫樂團演出","k":"記者會、大型活動"},{"d":"2024/12/14","t":"2024高雄駁二動漫祭","g":"五條真由美、工藤真由、幡野智宏","o":"高雄市政府文化局","p":"高雄駁二藝術特區","c":"動漫樂團/舞團演出、COSPLAY比賽、微漫畫頒獎典禮...","k":"記者會、大型活動"},{"d":"2025/04/12","t":"2025月讀滿月祭","g":"DJササキチ、at-home cafe：hitomi、Chimu、ちあきゃん","o":"月讀女僕咖啡","p":"高雄大立百貨B館頂樓遊樂園","c":"女僕表演、英雄秀、COSPLAY比賽、動漫DJ演出","k":"記者會、大型活動"},{"d":"2025/12/13","t":"2025高雄駁二動漫祭","g":"YOFFY、吉田仁美","o":"高雄市政府文化局","p":"高雄駁二藝術特區","c":"動漫樂團/舞團演出、COSPLAY比賽、微漫畫頒獎典禮、動漫DJ演出...","k":"記者會、大型活動"},{"d":"2026/01/01","t":"ACG IN XIMEN 西門街角動漫祭","g":"トリプルアイス、羽咲やわら、Flora Fiore、少女ガチャポン、無我夢中、白晝U:ME","o":"台北捷運公司","p":"中華路一段人行道","c":"偶像表演","k":"記者會、大型活動"},{"d":"2026/04/03","t":"A.C.F 秋葉原動漫祭","g":"ROOKIEZ is PUNK'D、宮崎步、栗林みな実、MindaRyn、at-home cafe（hitomi、Chimu、ふわる、わん、みしな）、HoneyHoney（みれ、こはく、つくし、おまめ、すず）、e-maid（えみ、さりー、はな）、外神田メイド協会（もも、べに、せんす）、橙幻郷（まほれ、めろ）","o":"創角數位有限公司","p":"松山文創園區","c":"動漫音樂演唱會、女僕運動會","k":"記者會、大型活動"},{"d":"2026/05/13","t":"星期漫畫夢 1989 A Sunday Comics Dream 特展開幕記者會","g":"","o":"國家漫畫博物館","p":"國家漫畫博物館","c":"記者會","k":"記者會、大型活動"},{"d":"2026/09/17","t":"2026台中國際動漫博覽會","g":"谷本貴義、暖爐 -Stove-、HAQUA from EXPG STUDIO TAIPEI、Yaki、Can[II]ceR、Ruka Banana、Coca-Koala","o":"台中市政府新聞局","p":"台中市政府市政大樓","c":"記者會、動漫DJ表演、偶像表演、隨舞","k":"記者會、大型活動"},{"d":"2026/09/20","t":"台中原創短漫大賽頒獎典禮","g":"","o":"台中市政府新聞局、國家漫畫博物館","p":"國家漫畫博物館","c":"頒獎典禮","k":"記者會、大型活動"},{"d":"2017/08/08","t":"Stardom日本女子摔角聯盟台灣大賽","g":"","o":"橘創整合行銷","p":"ATT SHOW BOX","c":"賽事轉播講評","k":"賽事、遊戲"},{"d":"2017/12/03","t":"《IDOLiSH7- 偶像星願 -》Fan Festival in Taipei","g":"製作人 下岡聰吉、製作人 根岸綾香、角色原案 種村有菜","o":"曼迪傳播","p":"Neo Studio","c":"來賓訪談、動畫放映、遊戲試玩","k":"賽事、遊戲"},{"d":"2018/02/24","t":"快打旋風V積分賽","g":"","o":"戰祭TFF","p":"小港社教館","c":"賽事轉播","k":"賽事、遊戲"},{"d":"2018/02/25","t":"戰祭TFF七龍珠FighterZ 戰祭外卡賽","g":"","o":"戰祭TFF","p":"小港社教館","c":"賽事轉播","k":"賽事、遊戲"},{"d":"2020/02/01","t":"《IDOLiSH7 -偶像星願-》新春特別見面會","g":"製作人 下岡聰吉、製作人 根岸綾香、角色原案 種村有菜","o":"BANDAI NAMCO Online Inc","p":"南港展覽館","c":"來賓訪談、有獎徵答、合作遊戲","k":"賽事、遊戲"},{"d":"2024/07/26","t":"《美男戰國》、《美男吸血鬼》繪師 山田シロ 互動會","g":"繪師-山田シロ、製作人-Hiroto","o":"iSWEETY 艾思維特","p":"台北世貿展覽館","c":"來賓訪談、簽名會、有獎徵答","k":"賽事、遊戲"},{"d":"2024/07/26","t":"《美男王子》英文版製作人HIROTO 簽名會","g":"製作人-Hiroto","o":"iSWEETY 艾思維特","p":"台北世貿展覽館","c":"來賓訪談、簽名會、有獎徵答","k":"賽事、遊戲"},{"d":"2025/07/25","t":"《美男王子》製作人HIROTO 互動會","g":"製作人-Hiroto","o":"iSWEETY 艾思維特","p":"台北世貿展覽館","c":"來賓訪談、簽名會、有獎徵答","k":"賽事、遊戲"},{"d":"2025/07/25","t":"《美男惡徒》英文版製作人HIROTO 簽名會","g":"製作人-Hiroto","o":"iSWEETY 艾思維特","p":"台北世貿展覽館","c":"來賓訪談、簽名會、有獎徵答","k":"賽事、遊戲"},{"d":"2026/07/24","t":"《美男戰國》繪師 山田シロ、英文版製作人HIROTO 互動會","g":"繪師-山田シロ、製作人-Hiroto","o":"iSWEETY 艾思維特","p":"台北世貿展覽館","c":"來賓訪談、簽名會、有獎徵答","k":"賽事、遊戲"},{"d":"2026/07/24","t":"《美男惡徒》英文版製作人HIROTO 簽名會","g":"製作人-Hiroto","o":"iSWEETY 艾思維特","p":"台北世貿展覽館","c":"來賓訪談、簽名會、有獎徵答","k":"賽事、遊戲"},{"d":"2013/05/10","t":"偉大的航道田中公平動漫交響音樂會","g":"田中公平、Pianeet侯爵、日高のり子、井上喜久子","o":"開拓動漫","p":"國立中正文化中心-國家音樂廳","c":"交響音樂演奏會、聲優脫口秀","k":"音樂會"},{"d":"2018/02/16","t":"雄頌管絃樂團【電影琴話】音樂會","g":"","o":"雄頌管絃樂團","p":"高雄市文化中心至德堂","c":"管弦樂團演出","k":"音樂會"},{"d":"2019/05/25","t":"皮卡克親子迎佛音樂市集","g":"","o":"靈鷲山","p":"高雄漢神巨蛋前廣場","c":"打擊樂、馬戲表演、音樂劇、魔術","k":"音樂會"},{"d":"2019/05/31","t":"「情繫弦緣」音樂會","g":"","o":"高雄市立明華國中","p":"高雄市音樂館","c":"弦樂團演出","k":"音樂會"},{"d":"2019/03/31","t":"超級英雄大集合－漫威&DC 電影配樂音樂會","g":"","o":"高雄市管樂團","p":"高雄市文化中心至德堂","c":"管樂團演出","k":"音樂會"},{"d":"2020/08/30","t":"2020情繫巴洛克音樂會","g":"","o":"絢季室內樂團","p":"高雄市音樂館","c":"室內樂團演出","k":"音樂會"},{"d":"2022/05/31","t":"鹽埕國小111級畢業音樂會","g":"","o":"鹽埕國小","p":"高雄市音樂館","c":"管樂、弦樂、棒鐘、阿卡貝拉","k":"音樂會"},{"d":"2022/06/15","t":"「弦悅綺響」音樂會","g":"","o":"高雄市立明華國中","p":"高雄市音樂館","c":"弦樂團演出","k":"音樂會"},{"d":"2023/02/08","t":"第五屆弦樂高峰會【舞弓弄弦】","g":"","o":"高雄市立明華國中","p":"大東文化藝術中心演藝廳","c":"8所學校弦樂團演出","k":"音樂會"},{"d":"2023/02/19","t":"「琴動心弦」音樂會","g":"","o":"高雄市立明華國中","p":"衛武營藝術文化中心音樂廳","c":"弦樂團演出","k":"音樂會"},{"d":"2023/12/08","t":"KCWO Pop 神曲祭~日本動畫番~","g":"","o":"高雄市管樂團","p":"高雄市文化中心至德堂","c":"室內樂團演出","k":"音樂會"},{"d":"2023/12/24","t":"奇美博物館 2023 聖誕週末 DISCO聖誕派對","g":"","o":"高雄市立明華國中","p":"奇美博物館","c":"弦樂團演出","k":"音樂會"},{"d":"2024/06/07","t":"2024「童樂會」音樂會","g":"","o":"高雄市四維國民小學","p":"高雄市文化中心至德堂","c":"管弦樂團演出","k":"音樂會"},{"d":"2024/06/09","t":"2024「弦遊盛夏」音樂會","g":"","o":"高雄市立明華國中","p":"衛武營藝術文化中心音樂廳","c":"弦樂團演出","k":"音樂會"},{"d":"2024/12/22","t":"2024奇美博物館愛在音樂聖誕音樂會","g":"","o":"高雄市立明華國中","p":"奇美博物館","c":"弦樂團演出","k":"音樂會"},{"d":"2025/02/16","t":"雄頌管絃樂團【電影琴話】音樂會","g":"","o":"雄頌管絃樂團","p":"高雄市文化中心至德堂","c":"管弦樂團演出","k":"音樂會"},{"d":"2025/05/30","t":"「弦動琴聲」音樂會","g":"","o":"高雄市立明華國中","p":"衛武營藝術文化中心音樂廳","c":"弦樂團演出","k":"音樂會"},{"d":"2026/01/27","t":"第八屆弦樂高峰會【舞弓弄弦】","g":"","o":"高雄市立明華國中","p":"高雄市文化中心至德堂","c":"8所學校弦樂團演出","k":"音樂會"},{"d":"2026/06/05","t":"2026「音樂魔法」音樂會","g":"","o":"高雄市四維國民小學","p":"高雄市文化中心至德堂","c":"管弦樂團演出","k":"音樂會"},{"d":"2026/06/11","t":"「弦琴藝綺」音樂會","g":"","o":"高雄市立明華國中","p":"衛武營藝術文化中心音樂廳","c":"弦樂團演出","k":"音樂會"},{"d":"2026/08/08","t":"Keichan Piano Asia Tour 2026 『ROOM』 IN TAIPEI","g":"けいちゃん","o":"鳴音合創有限公司","p":"中油國光會議廳","c":"鋼琴獨奏","k":"音樂會"},{"d":"2026/10/26","t":"2026《Yes, AI Do.》閉幕派對：愛在未來","g":"鬱P、和田たけあき（水母P）、DJ Jeff Hazama、計畫通行","o":"高雄市政府文化局","p":"駁二大勇區P2倉庫","c":"DJ電音派對","k":"音樂會"},{"d":"2018/06/06","t":"Hooya 報爆","g":"LiSA","o":"","p":"","c":"LiSA的愛大考驗！猜猜歌迷最愛的五首歌","k":"VTuber 節目"},{"d":"2018/06/20","t":"Hooya 報爆","g":"Matzka","o":"","p":"","c":"被逼問是否常想色色的事，Matzka給了這種表情","k":"VTuber 節目"},{"d":"2018/06/27","t":"Hooya 報爆","g":"乃木坂46","o":"","p":"","c":"乃木坂46「同步巧合」之默契大考驗！","k":"VTuber 節目"},{"d":"2018/07/04","t":"Hooya 報爆","g":"李佳薇","o":"","p":"","c":"李佳薇不飆高音比「氣長」，親揭「電梯腹肌」鍊成術","k":"VTuber 節目"},{"d":"2018/07/18","t":"Hooya 報爆","g":"李玉璽","o":"","p":"","c":"李玉璽鬥嘴鬥不停 「終於遇到比我還吵的人了！」","k":"VTuber 節目"},{"d":"2018/08/01","t":"Hooya 報爆","g":"蕭敬騰","o":"","p":"","c":"林宥嘉或楊宗緯？蕭敬騰荒島求生找伴竟選了他！","k":"VTuber 節目"},{"d":"2018/08/09","t":"Hooya 報爆","g":"孫盛希","o":"","p":"","c":"孫盛希大秀嘴上功夫！讚J.Sheon好性感","k":"VTuber 節目"},{"d":"2018/10/24","t":"Hooya 報爆","g":"宮野真守","o":"","p":"","c":"吃貨本能大開！宮野真守玩遊戲嗨到顏藝狂發","k":"VTuber 節目"},{"d":"2018/10/31","t":"Hooya 報爆","g":"鄧紫棋","o":"","p":"","c":"鄧紫棋害羞自爆 拍〈倒數〉MV時躲在樹後上廁所","k":"VTuber 節目"},{"d":"2023/10/07","t":"SAKURA MIKO TAIPEI FAN MEETING","g":"櫻巫女","o":"","p":"","c":"","k":"VTuber 節目"},{"d":"2024/12/28","t":"Virtual Festival 虛擬音樂群星會","g":"石狩あかり、乙夏れい、白玖ウタノ、涼風しとら、YOSHIKA⁂、巫てんり、浠 Mizuki、響 Hibiki、厄倫蒂兒、懶貓子 Rumi","o":"","p":"","c":"","k":"VTuber 節目"},{"d":"2014/08/09","t":"角川動漫教育Talk Session","g":"日本角川總公司董事長 古賀鐵也、日本MUGENUP公司董事長 一岡亮大、台灣友善文創總經理 王士豪、漫畫家 彭傑","o":"角川動漫教育","p":"台北世貿展覽館","c":"講座論壇","k":"講座"},{"d":"2019/12/22","t":"Good Smile Company玩家見面會\"萌\"的時間：聊聊黏土人","g":"Good Smile Company 社長 安藝貴範、企劃部 カホタン","o":"Good Smile Company","p":"77 O.M.G.文創中心","c":"玩家意見交流、新產品發表","k":"講座"},{"d":"2019/12/22","t":"Good Smile Company玩家見面會\"燃\"的時間：聊聊機器人玩具","g":"Good Smile Company 社長 安藝貴範、企劃部 田中ヒロ","o":"Good Smile Company","p":"77 O.M.G.文創中心","c":"玩家意見交流、新產品發表","k":"講座"},{"d":"2021/03/13","t":"第三次臺漫衝擊||臺漫現況/創作者焦慮/公部門政策/CCC的死與新生","g":"漫畫家 Barz、三色坊編輯 Haku、大辣文化編輯 李蕭弘、居日漫畫編輯 吳塵罡、漫畫家 韋蘺若明\n原作家 楊双子、奇異果文創創辦人暨創意總監 劉定綱、開拓動漫執行長/台灣動漫畫推廣協會理事長 蘇微希","o":"動漫企劃人員職業工會","p":"Clubhouse","c":"講座論壇","k":"講座"},{"d":"2021/05/08","t":"漫畫作品的第一位讀者||日本漫畫與編輯","g":"日本漫畫編輯/工作室STUDIO KITSCH代表人 吳塵罡、資深漫畫編輯 王凱平、奇異果文創創辦人暨創業總監 劉定綱 \n三色坊編輯 Haku、前CCC創作集專案經理 黃冠華","o":"動漫企劃人員職業工會","p":"Clubhouse","c":"講座論壇","k":"講座"},{"d":"2021/07/24","t":"疫情之下無法面對面的展覽||線上販售會的可行性與發展","g":"噗浪線上場主辦單位代表、滿滿漫畫節發起人暨主辦 黃廷玉","o":"動漫企劃人員職業工會","p":"Clubhouse","c":"講座論壇","k":"講座"},{"d":"2021/08/14","t":"走跳江湖不能不知道的公門解密","g":"文創經紀人大眼、自由接案工作者lris Liao、前臺灣漫畫基地經理Vivian","o":"動漫企劃人員職業工會","p":"Clubhouse","c":"講座論壇","k":"講座"},{"d":"2021/09/03","t":"【漫基講堂】經營日本漫畫市場從來就不容易！臺灣創作者赴日發展攻略","g":"三色坊漫畫編輯 HAKU","o":"台灣漫畫基地","p":"Clubhouse","c":"講座論壇","k":"講座"},{"d":"2021/11/27","t":"台灣VTuber發展與未來展望","g":"","o":"高雄市政府文化局","p":"高雄駁二藝術特區","c":"講座論壇","k":"講座"},{"d":"2021/12/02","t":"當虛擬 IP 遇上實況主，談台灣 VTuber 現況與未來","g":"Yahoo! TV 製作人 許朝欽、春魚工作室 製作人 陳善清、魔競娛樂 KOL/VT 營運總監 蘭先倫（懶貓）","o":"2021 亞洲新媒體高峰會","p":"台北晶華酒店","c":"講座論壇","k":"講座"},{"d":"2022/03/12","t":"台灣文化動漫塾：談虛擬偶像與動漫文化的淵源","g":"","o":"臺北市動漫企劃人員職業工會","p":"龍山文創基地 B2 數位內容實驗場","c":"講座論壇","k":"講座"},{"d":"2022/05/01","t":"台灣VTuber發展的過去、現在、未來","g":"VTuber 兔姬","o":"臺北市動漫企劃人員職業工會","p":"龍山文創基地 B2 數位內容實驗場","c":"講座論壇","k":"講座"},{"d":"2022/11/06","t":"【漫基講堂】一日VTuber製作人：如何打造人氣IP？","g":"春魚工作室 製作人 春魚量產型","o":"台灣漫畫基地","p":"台灣漫畫基地","c":"講座論壇","k":"講座"},{"d":"2022/12/03","t":"CxC創利市集《創作者大會》","g":"餅乾、米米卡醬、ZIYO、謝東霖","o":"CxC創利市集","p":"宏匯瑞光廣場","c":"講座論壇","k":"講座"},{"d":"2024/11/10","t":"CxC創利市集《創作者大會》","g":"","o":"CxC創利市集","p":"宏匯瑞光廣場","c":"講座論壇","k":"講座"},{"d":"2025/11/01","t":"CxC創利市集《創作者大會》","g":"","o":"CxC創利市集","p":"政大公企中心 6 樓","c":"講座論壇","k":"講座"},{"d":"2025/11/08","t":"2026神探Impossible Mission系列講座【龍紋身的女孩：數位真相與社會黑暗】","g":"作家-閱讀探戈、檢察官-林錦鴻","o":"台灣犯罪作家聯會、最高檢察署","p":"紀州庵文學森林","c":"講座論壇","k":"講座"},{"d":"2026/01/10","t":"2026神探Impossible Mission系列講座【思考機器：案件推理的極限】","g":"作家-高雲章、檢察官-吳梓榕","o":"台灣犯罪作家聯會、最高檢察署","p":"高雄文學館","c":"講座論壇","k":"講座"},{"d":"2026/01/11","t":"2026神探Impossible Mission系列講座【宋戴克醫師：物證與鑑識的微聲】","g":"作家-白帽子、檢察官-劉建志","o":"台灣犯罪作家聯會、最高檢察署","p":"REEDS Bookstore","c":"講座論壇","k":"講座"},{"d":"2026/01/24","t":"2026神探Impossible Mission系列講座【人造正義：AI審判是未來還是危險？】","g":"作家-譚端、檢察官-林芝郁","o":"台灣犯罪作家聯會、最高檢察署","p":"檜意森活村","c":"講座論壇","k":"講座"},{"d":"2026/01/25","t":"台灣VTuber、Cosplayer、實況主、網紅從業者如何面對『數位／網路性別暴力騷擾』","g":"VTuber 萊菈·希格娜斯、VTuber 雨咩、張偉志律師、卓心雅律師、臺北市動漫企劃人員職業工會 狐面理事長","o":"臺北市動漫企劃人員職業工會","p":"龍山文創基地 B2 特製庫","c":"講座論壇","k":"講座"},{"d":"2026/02/28","t":"Good Smile 模型狂歡祭 in 台灣 粉絲見面會（關於Good Smile）","g":"Good Smile Company 會長 安藝貴範、企劃部 カホタン、企劃部 浜子","o":"Good Smile Company","p":"三創生活園區 5樓 星光廳","c":"玩家意見交流、新產品發表","k":"講座"},{"d":"2026/02/28","t":"Good Smile 模型狂歡祭 in 台灣 粉絲見面會（關於Mecha Smile）","g":"Mecha Smile總製作人 田中ヒロ、Mecha Smile製作人 髙木義弘","o":"Good Smile Company","p":"三創生活園區 5樓 星光廳","c":"玩家意見交流、新產品發表","k":"講座"},{"d":"2026/05/16","t":"飄移模擬器與真實甩尾賽車手分享","g":"","o":"ManiaFair非典型專家博覽會","p":"花博爭豔館","c":"講座論壇","k":"講座"},{"d":"2026/05/16","t":"台灣VTuber、Cosplayer、實況主、網紅從業者如何面對『數位／網路性別暴力騷擾』","g":"張偉志律師","o":"臺北市動漫企劃人員職業工會","p":"花博爭豔館","c":"講座論壇","k":"講座"},{"d":"2026/05/17","t":"Yamaha SR150改裝心得","g":"","o":"遺品整理師大熊","p":"花博爭豔館","c":"講座論壇","k":"講座"},{"d":"2026/05/17","t":"拒絕成為臭臭宅！香宅養成基礎研討講座","g":"","o":"動漫企劃人員職業工會","p":"花博爭豔館","c":"講座論壇","k":"講座"},{"d":"2026/06/21","t":"Mecha Smile台灣粉絲見面會＆新作發表會","g":"Mecha Smile總製作人 田中ヒロ","o":"Good Smile Company","p":"三創生活園區 5樓 星光廳","c":"玩家意見交流、新產品發表","k":"講座"},{"d":"2026/09/12","t":"從《尼古喵喵》事件談 當法規遇上創作：ACG創作的管制界線","g":"漫畫家-貓伊光、董氏基金會-林清麗、CxC創利市集-陳宏睿、臺大醫院-郭斐然長、中央研究院法律學研究所-吳全峰、灼然法律事務所-張偉志","o":"臺北市動漫企劃人員職業工會","p":"龍山文創基地 B2 數位內容實驗場","c":"講座論壇","k":"講座"},{"d":"2026/11/14","t":"CxC創利市集《創作者大會》","g":"","o":"CxC創利市集","p":"政大公企中心 6 樓","c":"講座論壇","k":"講座"},{"d":"2024/05/12","t":"Petit Fancy 40 甜美 X 奇幻 蘿莉塔時尚走秀","g":"","o":"開拓動漫","p":"花博爭豔館","c":"Lolita時尚走秀","k":"時尚"},{"d":"2025/05/04","t":"Petit Fancy 42 甜美 X 奇幻 蘿莉塔時尚走秀","g":"","o":"開拓動漫","p":"花博爭豔館","c":"Lolita時尚走秀","k":"時尚"},{"d":"2026/05/17","t":"Petit Fancy 44 甜美 X 奇幻 蘿莉塔時尚走秀","g":"","o":"開拓動漫","p":"花博爭豔館","c":"Lolita時尚走秀","k":"時尚"},{"d":"2026/10/16","t":"榮町和洋嘉年華","g":"Neko、EMOKO、HAQUA from EXPG STUDIO TAIPEI","o":"臺北市中正區榮町商圈暨城內社區發展協會","p":"榮町商圈","c":"頒獎典禮、偶像表演","k":"時尚"},{"d":"2011/12/15","t":"新北市動漫畫原作劇本競賽頒獎典禮","g":"","o":"新北市政府文化局","p":"新北市政府","c":"頒獎典禮","k":"其他"},{"d":"2018/07/28","t":"「第七屆開拓極短篇原創大賞」頒獎典禮","g":"","o":"開拓動漫","p":"花博爭豔館","c":"頒獎典禮","k":"其他"},{"d":"2019/11/30","t":"2019台中漫畫跨界合作工作坊-頒獎典禮","g":"台中市新聞局局長 黃國瑋","o":"台中市政府新聞局","p":"文化部文化資產園區雅堂館","c":"記者會、頒獎典禮","k":"其他"},{"d":"2021/02/27","t":"第6屆竹梅源文藝獎2021全國油畫創作比賽-頒獎典禮","g":"文化部長 李永得、立法委員 邱議瑩","o":"王源林文化藝術基金會","p":"高雄市政府文化中心至真二館","c":"頒獎典禮","k":"其他"},{"d":"2022/02/26","t":"第7屆竹梅源文藝獎2022全國油畫創作比賽-頒獎典禮","g":"文化部長 李永得","o":"王源林文化藝術基金會","p":"高雄市政府文化中心至真二館","c":"頒獎典禮","k":"其他"},{"d":"2022/11/12","t":"第五屆原創手繪漫畫大賽頒獎典禮","g":"","o":"台北市漫畫工會","p":"龍山寺地下街","c":"頒獎典禮","k":"其他"},{"d":"2023/07/08","t":"名偵探柯南劇場版『黑鐵的魚影』人偶見面會","g":"江戶川柯南","o":"高雄夢時代百貨","p":"高雄夢時代百貨","c":"合照","k":"其他"},{"d":"2023/07/23","t":"名偵探柯南劇場版『黑鐵的魚影』人偶見面會","g":"江戶川柯南","o":"高雄夢時代百貨","p":"高雄夢時代百貨","c":"合照","k":"其他"},{"d":"2024/06/22","t":"名偵探柯南劇場版『100萬美元的五稜星』人偶見面會","g":"江戶川柯南","o":"高雄夢時代百貨","p":"高雄夢時代百貨","c":"合照","k":"其他"},{"d":"2024/07/21","t":"名偵探柯南劇場版『100萬美元的五稜星』人偶見面會","g":"江戶川柯南","o":"高雄夢時代百貨","p":"高雄夢時代百貨","c":"合照","k":"其他"},{"d":"2025/06/28","t":"名偵探柯南劇場版『獨眼的殘像』人偶見面會","g":"江戶川柯南","o":"高雄夢時代百貨","p":"高雄夢時代百貨","c":"合照","k":"其他"},{"d":"2025/07/20","t":"名偵探柯南劇場版『獨眼的殘像』人偶見面會","g":"江戶川柯南","o":"MITSUI OUTLET PARK 台南","p":"MITSUI OUTLET PARK 台南","c":"合照","k":"其他"},{"d":"2026/06/27","t":"名偵探柯南劇場版『高速公路的墮天使』人偶見面會","g":"江戶川柯南","o":"高雄夢時代百貨","p":"高雄夢時代百貨","c":"合照","k":"其他"}]</script>
+<script>
+const DATA = JSON.parse(document.getElementById('data').textContent);
+const CATS = [
+  ['聲優','声優'],['演員、偶像、歌手','俳優・アイドル・歌手'],['記者會、大型活動','記者会見・総合イベント'],['講座','トークイベント'],
+  ['Cosplay','コスプレ'],['音樂會','演奏会'],['漫畫家、作者','漫画家・作者'],['電視、電影','映画・テレビ'],
+  ['VTuber 節目','VTuber・番組'],['賽事、遊戲','試合・ゲーム'],['布袋戲','人形劇'],['時尚','ファッション'],['其他','その他']
+];
+DATA.sort((a,b)=>b.d.localeCompare(a.d));
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const count = f => DATA.reduce((m,e)=>{const k=f(e); if(k) m[k]=(m[k]||0)+1; return m;},{});
+const byCat = count(e=>e.k), byYear = count(e=>e.d.slice(0,4));
+const years = Object.keys(byYear).sort();
+const guestSet = new Set(); DATA.forEach(e=>e.g.split(/[、,，]/).forEach(x=>{x=x.trim(); if(x) guestSet.add(x);}));
+const firstYear = years[0], span = new Date().getFullYear() - (+firstYear);
+
+$('#stats').innerHTML = [
+  [`${DATA.length}<em>+</em>`, '場主持紀錄'],
+  [firstYear, `起主持至今，${span} 年以上`],
+  [guestSet.size, '位同台來賓'],
+  [Object.keys(byCat).length, '種活動類型'],
+].map(([b,s])=>`<div class="stat"><b>${b}</b><span>${s}</span></div>`).join('');
+
+$('#cats').innerHTML = CATS.filter(([k])=>byCat[k]).map(([k,ja])=>
+  `<button class="cat" type="button" data-k="${esc(k)}" aria-pressed="false"><span class="zh">${esc(k)}</span><span class="ja">${esc(ja)}</span><span class="n">${byCat[k]}</span></button>`).join('');
+
+const maxY = Math.max(...Object.values(byYear));
+const allYears = []; for(let y=+firstYear; y<=+years[years.length-1]; y++) allYears.push(String(y));
+$('#chart').innerHTML = allYears.map(y=>{const v=byYear[y]||0; return `<button class="bar" type="button" data-y="${y}" aria-pressed="false" aria-label="${y} 年 ${v} 場"><span class="v">${v||''}</span><i style="height:${v? (v/maxY*85).toFixed(1):0}%"></i></button>`;}).join('');
+$('#years').innerHTML = allYears.map(y=>`<span>${y.slice(2)}</span>`).join('');
+
+const orgs = Object.entries(count(e=>e.o.replace('臺北市動漫企劃人員職業工會','動漫企劃人員職業工會'))).sort((a,b)=>b[1]-a[1]).slice(0,12);
+$('#orgs').innerHTML = orgs.map(([o,n])=>`<span class="org">${esc(o)}<b>${n}</b></span>`).join('');
+
+$('#fk').innerHTML = '<option value="">全部類型</option>' + CATS.filter(([k])=>byCat[k]).map(([k])=>`<option value="${esc(k)}">${esc(k)}（${byCat[k]}）</option>`).join('');
+$('#fy').innerHTML = '<option value="">全部年份</option>' + years.slice().reverse().map(y=>`<option value="${y}">${y}（${byYear[y]}）</option>`).join('');
+
+function hl(text, q){ const t = esc(text); if(!q) return t; const i = t.toLowerCase().indexOf(esc(q).toLowerCase()); if(i<0) return t; const L = esc(q).length; return t.slice(0,i)+'<mark>'+t.slice(i,i+L)+'</mark>'+t.slice(i+L); }
+
+function render(){
+  const q = $('#q').value.trim(), k = $('#fk').value, y = $('#fy').value;
+  const ql = q.toLowerCase();
+  const rows = DATA.filter(e => (!k || e.k===k) && (!y || e.d.startsWith(y)) &&
+    (!ql || [e.t,e.g,e.o,e.p,e.c].join(' ').toLowerCase().includes(ql)));
+  document.querySelectorAll('.cat').forEach(b=>b.setAttribute('aria-pressed', b.dataset.k===k));
+  document.querySelectorAll('.bar').forEach(b=>b.setAttribute('aria-pressed', b.dataset.y===y));
+  $('#reset').hidden = !(q||k||y);
+  $('#count').textContent = (q||k||y) ? `找到 ${rows.length} 場` : `共 ${rows.length} 場`;
+  if(!rows.length){ $('#out').innerHTML = '<p class="empty">沒有符合的場次，換個關鍵字或清除篩選試試。</p>'; return; }
+  const groups = {}; rows.forEach(e=>{(groups[e.d.slice(0,4)] ||= []).push(e);});
+  $('#out').innerHTML = Object.keys(groups).sort().reverse().map(yr=>
+    `<div class="yr"><h3>${yr}<small>${groups[yr].length} 場</small></h3><div class="list">${groups[yr].map(e=>`
+      <article class="ev">
+        <div class="date">${e.d.slice(5)}</div>
+        <div>
+          <h4><span class="tag">${esc(e.k)}</span>${hl(e.t,q)}</h4>
+          ${e.g?`<div class="g">${hl(e.g,q)}</div>`:''}
+          ${(e.o||e.p)?`<div class="meta">${e.o?`<span>主辦　${hl(e.o,q)}</span>`:''}${e.p?`<span>地點　${hl(e.p,q)}</span>`:''}</div>`:''}
+          ${e.c?`<div class="what">${e.c.split(/[、，,]/).filter(Boolean).map(c=>`<span>${hl(c.trim(),q)}</span>`).join('')}</div>`:''}
+        </div>
+      </article>`).join('')}</div></div>`).join('');
+}
+function jump(){ $('#runsheet').scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto':'smooth'}); }
+$('#cats').addEventListener('click', ev=>{const b=ev.target.closest('.cat'); if(!b) return; $('#fk').value = $('#fk').value===b.dataset.k ? '' : b.dataset.k; render(); jump();});
+$('#chart').addEventListener('click', ev=>{const b=ev.target.closest('.bar'); if(!b || !byYear[b.dataset.y]) return; $('#fy').value = $('#fy').value===b.dataset.y ? '' : b.dataset.y; render(); jump();});
+['#q','#fk','#fy'].forEach(s=>$(s).addEventListener('input', render));
+$('#reset').addEventListener('click', ()=>{$('#q').value='';$('#fk').value='';$('#fy').value='';render();});
+render();
+
+document.querySelectorAll('button.copy').forEach(b => b.addEventListener('click', () => {
+  const el = document.getElementById(b.dataset.copy), text = el.textContent.trim();
+  const done = () => { b.textContent = '已複製'; setTimeout(() => b.textContent = '複製', 1600); };
+  const fallback = () => { const r = document.createRange(); r.selectNodeContents(el); const s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = '已選取，請按複製'; setTimeout(() => b.textContent = '複製', 2400); };
+  try { navigator.clipboard.writeText(text).then(done, fallback); } catch (e) { fallback(); }
+}));
+</script>
+
+</body>
+</html>
