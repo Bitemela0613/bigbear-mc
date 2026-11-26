@@ -71,6 +71,16 @@ section{padding-top:56px}
 .sec-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:18px}
 .sec-head h2{font-size:26px;font-weight:900}
 .sec-head p{margin:0;color:var(--muted);font-size:14px}
+.jp{font-weight:500;color:var(--muted);letter-spacing:.04em}
+h2 .jp{display:block;font-size:12px;margin-top:4px}
+.label .jp{margin-left:8px;font-size:11px;font-weight:400}
+p.jp-p{margin:8px 0 0;font-size:13px;line-height:1.75;color:var(--muted)}
+.chip small{margin-left:6px;font-size:11px;font-weight:400;color:var(--muted)}
+.btn.primary small{color:#fff;font-weight:400}
+.stat .jp{display:block;font-size:11px;line-height:1.5}
+.eyebrow{flex-wrap:wrap;row-gap:4px}
+@media (max-width:520px){.eyebrow .jp{flex-basis:100%}}
+.eyebrow .jp{font-family:var(--f-body);font-size:11px;letter-spacing:.06em;text-transform:none}
 
 
 /* two column: categories + years */
@@ -209,19 +219,20 @@ footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);font-si
 <div class="wrap">
   <header class="hero">
     <div>
-      <div class="eyebrow"><span class="onair">MC</span>動漫・文化活動主持人</div>
+      <div class="eyebrow"><span class="onair">MC</span>動漫・文化活動主持人<span class="jp">アニメ・文化イベント司会者</span></div>
       <div class="name"><h1>大熊</h1><span class="real">曾慶平</span></div>
       <p class="lead">專業文化類活動主持人，擅長記者會、音樂會、簽名會、沙龍講座、脫口秀、映後座談、角色扮演比賽活動主持，也曾擔任競技比賽主播、音樂會導聆等。</p>
-      <div class="label">擅長的活動形式</div>
+      <p class="jp-p" lang="ja">文化系イベントを専門とするプロの司会者。記者会見、コンサート、サイン会、サロントーク、トークショー、上映後トーク、コスプレコンテストなどの司会を得意とし、競技大会の実況やコンサートのナビゲーターも務めています。</p>
+      <div class="label">擅長的活動形式<span class="jp">得意なイベント形式</span></div>
       <div class="chips">
-        <span class="chip">記者會</span><span class="chip">音樂會導聆</span><span class="chip">簽名會・見面會</span><span class="chip">沙龍講座</span><span class="chip">脫口秀</span><span class="chip">映後座談</span><span class="chip">Cosplay 比賽</span><span class="chip">競技比賽主播</span>
+        <span class="chip">記者會<small lang="ja">記者会見</small></span><span class="chip">音樂會導聆<small lang="ja">コンサートナビゲーター</small></span><span class="chip">簽名會・見面會<small lang="ja">サイン会・ファンミーティング</small></span><span class="chip">沙龍講座<small lang="ja">サロントーク</small></span><span class="chip">脫口秀<small lang="ja">トークショー</small></span><span class="chip">映後座談<small lang="ja">上映後トーク</small></span><span class="chip">Cosplay 比賽<small lang="ja">コスプレコンテスト</small></span><span class="chip">競技比賽主播<small lang="ja">大会実況</small></span>
       </div>
-      <div class="label">熟悉的領域</div>
+      <div class="label">熟悉的領域<span class="jp">得意ジャンル</span></div>
       <div class="chips">
-        <span class="chip blue">漫畫</span><span class="chip blue">動畫</span><span class="chip blue">電玩</span><span class="chip blue">小說</span><span class="chip blue">電競</span><span class="chip blue">電影</span><span class="chip blue">文化</span>
+        <span class="chip blue">漫畫<small lang="ja">マンガ</small></span><span class="chip blue">動畫<small lang="ja">アニメ</small></span><span class="chip blue">電玩<small lang="ja">ゲーム</small></span><span class="chip blue">小說<small lang="ja">小説</small></span><span class="chip blue">電競<small lang="ja">eスポーツ</small></span><span class="chip blue">電影<small lang="ja">映画</small></span><span class="chip blue">文化<small lang="ja">カルチャー</small></span>
       </div>
       <div class="links">
-        <a class="btn primary" href="#contact">邀約主持</a>
+        <a class="btn primary" href="#contact">邀約主持 <small lang="ja">司会のご依頼</small></a>
         <a class="btn" href="https://gnn.gamer.com.tw/3/161313.html" target="_blank" rel="noopener">巴哈姆特專訪 <small>動漫活動主持幕後</small></a>
         <a class="btn" href="https://www.youtube.com/watch?v=A3UW3q-TjfU" target="_blank" rel="noopener">廣播訪問 <small>《動漫我要聽》第 440 集</small></a>
       </div>
@@ -237,8 +248,9 @@ footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);font-si
   <section id="contact">
     <div class="contact">
       <div class="contact-intro">
-        <h2>邀約主持</h2>
+        <h2>邀約主持<span class="jp">司会のご依頼</span></h2>
         <p>記者會、見面會、音樂會、講座或比賽，歡迎來信或私訊。請附上活動日期、地點、活動類型與來賓，大熊會盡快回覆。</p>
+        <p class="jp-p" lang="ja">記者会見、ファンミーティング、コンサート、トークイベント、大会など、お気軽にメールまたはメッセージでご連絡ください。開催日・会場・イベント内容・ゲストをお知らせいただければ、折り返しご連絡いたします。</p>
       </div>
       <div class="contact-list">
         <div class="ci">
@@ -263,21 +275,21 @@ footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);font-si
   <section>
     <div class="split">
       <div>
-        <div class="sec-head"><h2>活動類型</h2><p>點一下就能篩選場次</p></div>
+        <div class="sec-head"><h2>活動類型<span class="jp">イベントジャンル</span></h2><p>點一下就能篩選場次</p></div>
         <div class="cats" id="cats"></div>
       </div>
       <div>
-        <div class="sec-head"><h2>每年場次</h2><p>點長條看那一年</p></div>
+        <div class="sec-head"><h2>每年場次<span class="jp">年別の司会実績</span></h2><p>點長條看那一年</p></div>
         <div class="chart" id="chart"></div>
         <div class="years" id="years"></div>
-        <div class="label">常合作的主辦單位</div>
+        <div class="label">常合作的主辦單位<span class="jp">主な主催者</span></div>
         <div class="orgs" id="orgs"></div>
       </div>
     </div>
   </section>
 
   <section>
-    <div class="sec-head"><h2>主持現場</h2></div>
+    <div class="sec-head"><h2>主持現場<span class="jp">司会の現場</span></h2></div>
     <div class="gallery">
       <figure><img src="img/yonezawa-stage.jpg" alt="大熊在 Live House 舞台上帶動觀眾，聲優米澤茜與口譯坐在一旁" loading="lazy"><figcaption>米澤茜見面會，帶動全場互動</figcaption></figure>
       <figure><img src="img/concert2.jpg" alt="大熊手持麥克風，在管弦樂團前主持音樂會" loading="lazy"><figcaption>管弦樂音樂會主持・導聆</figcaption></figure>
@@ -290,7 +302,7 @@ footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);font-si
   </section>
 
   <section id="runsheet">
-    <div class="sec-head"><h2>完整主持場次</h2><p>依年份由新到舊排列</p></div>
+    <div class="sec-head"><h2>完整主持場次<span class="jp">司会実績一覧</span></h2><p>依年份由新到舊排列</p></div>
     <div class="controls">
       <label for="q" hidden>搜尋</label>
       <input id="q" type="search" placeholder="搜尋來賓、作品、主辦單位、場地…">
@@ -330,11 +342,11 @@ const guestSet = new Set(); DATA.forEach(e=>e.g.split(/[、,，]/).forEach(x=>{x
 const firstYear = years[0], span = new Date().getFullYear() - (+firstYear);
 
 $('#stats').innerHTML = [
-  [`${DATA.length}<em>+</em>`, '場主持紀錄'],
-  [firstYear, `起主持至今，${span} 年以上`],
-  [guestSet.size, '位同台來賓'],
-  [Object.keys(byCat).length, '種活動類型'],
-].map(([b,s])=>`<div class="stat"><b>${b}</b><span>${s}</span></div>`).join('');
+  [`${DATA.length}<em>+</em>`, '場主持紀錄', '回の司会実績'],
+  [firstYear, `起主持至今，${span} 年以上`, `年から司会、キャリア${span}年以上`],
+  [guestSet.size, '位同台來賓', '名の共演ゲスト'],
+  [Object.keys(byCat).length, '種活動類型', 'のイベントジャンル'],
+].map(([b,s,ja])=>`<div class="stat"><b>${b}</b><span>${s}</span><span class="jp" lang="ja">${ja}</span></div>`).join('');
 
 $('#cats').innerHTML = CATS.filter(([k])=>byCat[k]).map(([k,ja])=>
   `<button class="cat" type="button" data-k="${esc(k)}" aria-pressed="false"><span class="cic">${ic(k)}</span><span class="zh">${esc(k)}</span><span class="ja">${esc(ja)}</span><span class="n">${byCat[k]}</span></button>`).join('');
