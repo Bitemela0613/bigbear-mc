@@ -76,6 +76,11 @@ h2 .jp{display:block;font-size:12px;margin-top:4px}
 .label .jp{margin-left:8px;font-size:11px;font-weight:400}
 p.jp-p{margin:8px 0 0;font-size:13px;line-height:1.75;color:var(--muted)}
 .chip small{margin-left:6px;font-size:11px;font-weight:400;color:var(--muted)}
+.links.media{margin-top:14px}
+@media (max-width:520px){
+  .links.media{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .links.media .btn{flex-direction:column;align-items:flex-start;gap:0;padding:8px 12px;line-height:1.4}
+}
 .btn.primary small{color:#fff;font-weight:400}
 .stat .jp{display:block;font-size:11px;line-height:1.5}
 .eyebrow{flex-wrap:wrap;row-gap:4px}
@@ -234,13 +239,15 @@ footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);font-si
       </div>
       <div class="links">
         <a class="btn primary" href="#contact">邀約主持 <small lang="ja">司会のご依頼</small></a>
-        <a class="btn" href="https://gnn.gamer.com.tw/3/161313.html" target="_blank" rel="noopener">巴哈姆特專訪 <small>動漫活動主持幕後</small></a>
-        <a class="btn" href="https://www.youtube.com/watch?v=A3UW3q-TjfU" target="_blank" rel="noopener">廣播訪問 <small>《動漫我要聽》第 440 集</small></a>
       </div>
     </div>
     <figure class="photo">
       <img src="img/yonezawa-mc.jpg" alt="大熊西裝筆挺手持麥克風，在舞台上主持米澤茜粉絲見面會">
       <figcaption>「動漫主持人大熊」工作照</figcaption>
+      <div class="links media">
+        <a class="btn" href="https://gnn.gamer.com.tw/3/161313.html" target="_blank" rel="noopener">巴哈姆特專訪 <small>動漫活動主持幕後</small></a>
+        <a class="btn" href="https://www.youtube.com/watch?v=A3UW3q-TjfU" target="_blank" rel="noopener">廣播訪問 <small>《動漫我要聽》第 440 集</small></a>
+      </div>
     </figure>
   </header>
 
