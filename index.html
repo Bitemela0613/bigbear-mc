@@ -136,7 +136,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .ev .tag .ic{font-size:13px;margin-right:3px;vertical-align:-2px}
 .ev .tag{display:inline-block;font-size:11px;font-weight:700;color:var(--accent);margin-right:8px;vertical-align:2px}
 .ev .g{font-size:14px;margin-top:2px}
-.ev .g::before{content:"來賓　";color:var(--muted);font-size:12px}
+.ev .g::before{content:"來賓";font-weight:700;color:var(--blue);font-size:12px;margin-right:8px}
+.ev .meta .k{font-weight:700;color:var(--blue);font-size:12px;margin-right:8px}
 .ev .meta{font-size:13px;color:var(--muted);margin-top:4px;display:flex;flex-wrap:wrap;gap:4px 14px}
 .ev .what{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
 .ev .what span{font-size:12px;padding:1px 8px;border-radius:3px;background:var(--blue-soft)}
@@ -382,7 +383,7 @@ function render(){
         <div>
           <h4><span class="tag">${ic(e.k)}${esc(e.k)}</span>${e.u?`<a class="evlink" href="${esc(e.u)}" target="_blank" rel="noopener">${hl(e.t,q)}<span class="ext" aria-hidden="true">↗</span></a>`:hl(e.t,q)}</h4>
           ${e.g?`<div class="g">${hl(e.g,q)}</div>`:''}
-          ${(e.o||e.p)?`<div class="meta">${e.o?`<span>主辦　${hl(e.o,q)}</span>`:''}${e.p?`<span>地點　${hl(e.p,q)}</span>`:''}</div>`:''}
+          ${(e.o||e.p)?`<div class="meta">${e.o?`<span><b class="k">主辦</b>${hl(e.o,q)}</span>`:''}${e.p?`<span><b class="k">地點</b>${hl(e.p,q)}</span>`:''}</div>`:''}
           ${e.c?`<div class="what">${e.c.split(/[、，,]/).filter(Boolean).map(c=>`<span>${hl(c.trim(),q)}</span>`).join('')}</div>`:''}
         </div>
       </article>`).join('')}</div></div>`).join('');
